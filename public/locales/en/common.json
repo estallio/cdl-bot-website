@@ -1,0 +1,10 @@
+{
+  "back-to-homepage": "Back to homepage",
+  "welcome-heading-first-part": "Welcome to the",
+  "welcome-heading-second-part": "Christian Doppler Laboratory CDL-BOT",
+  "welcome-text": "In the Christian Doppler Laboratory Blockchain Technologies for the Internet of Things (CDL-BOT) researchers work on different research questions which aim to make Distributed Ledger Technologies (DLTs) suitable for applications in the Internet of Things (IoT).",
+  "research-fields-heading": "Research fields",
+  "research-fields-text": "The research problems taken into account range from blockchain interoperability to lightweight DLTs and support for software developers. CDL-BOT aims at making DLTs a commodity in the IoT - for applications ranging from trustful data exchange and data storage to payment mechanisms.",
+  "supporters-heading": "Supporters and partners",
+  "supporters-text": "CDL-BOT is located at TU Wien and financed by Austria's Federal Ministry for Digital and Economic Affairs and its industrial partners Pantos (Austria) and the IOTA Foundation (Germany).\nIn Christian Doppler Laboratories, application-oriented basic research is pursued at a high level, and expert scientists cooperate with innovative companies. The Christian Doppler Research Association is an international best practice example for promoting this collaboration.\nChristian Doppler Laboratories are financed jointly by the public purse and the participating companies. The most important public sponsor is the Federal Ministry for Digital and Economic Affairs (BMDW)."
+}
