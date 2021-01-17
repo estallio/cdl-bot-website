@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import Error from 'next/error';
@@ -56,7 +57,7 @@ ErrorPage.getInitialProps = async ({ res, err }) => {
   }
 
   return {
-    namespacesRequired: ['common'],
+    namespacesRequired: ['miscellaneous'],
     statusCode,
   };
 };
@@ -70,4 +71,4 @@ ErrorPage.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default withTranslation('common')(ErrorPage);
+export default withTranslation('miscellaneous')(ErrorPage);
