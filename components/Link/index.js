@@ -12,7 +12,7 @@ export default withRouter(
       <Link {...rest} href={href} as={as}>
         {React.cloneElement(Children.only(children), {
           className: classNames(children.props.className, defaultClass, {
-            [activeClass]: router.asPath === href || router.asPath === as,
+            [activeClass]: router.pathname === href || router.asPath === as,
           }),
         })}
       </Link>
