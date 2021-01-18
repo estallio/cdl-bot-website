@@ -1,0 +1,13 @@
+@import styles/variables.sass
+@import ~include-media/dist/_include-media.scss
+
+.logo
+  margin-top: 10px
+  float: left
+  width: 150px
+  @include media(">iphone6")
+    width: 200px
+  @include media(">iphone6Plus")
+    width: 220px
+  @include media(">bigPhone")
+    width: 300px

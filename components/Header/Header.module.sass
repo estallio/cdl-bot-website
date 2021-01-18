@@ -1,0 +1,18 @@
+@import styles/variables.sass
+@import ~include-media/dist/_include-media.scss
+
+.inner
+  width: 100%
+  margin: 0 auto
+  padding: 20px 40px 20px 40px
+  @include media(">bigPhone")
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+  @include media(">desktop")
+    max-width: 1180px
+    padding: 20px
+
+.menu
+  float: right

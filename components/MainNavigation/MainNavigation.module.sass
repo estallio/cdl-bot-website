@@ -1,0 +1,96 @@
+@import styles/variables.sass
+@import ~include-media/dist/_include-media.scss
+
+.mainNavigation
+  &.open .menuToggle
+    border-color: transparent
+    &:after
+      top: 30px
+      right: 40px
+      content: '×'
+      font-size: 100px
+      position: fixed
+  &.open .nav
+    visibility: visible
+    opacity: 1
+
+.nav
+  padding-top: 40px
+  top: 0
+  left: 0
+  visibility: hidden
+  opacity: 0
+  position: fixed
+  width: 100%
+  height: 100%
+  background-color: $white
+  z-index: 90
+  font-family: $themeFont
+  transition: visibility 0.25s, opacity 0.25s linear
+  @include media(">tablet")
+    top: 0
+    width: auto
+    height: auto
+    background: none
+    position: relative
+    float: right
+    padding: 0
+    visibility: visible
+    opacity: 1
+
+.menuToggle
+  padding: 10px 0 0
+  border-bottom: 3px solid $blue
+  float: right
+  position: relative
+  z-index: 100
+  @include media(">tablet")
+    display: none
+  &:after
+    margin-top: -2px
+    content: 'Menu'
+    font-size: $h2FontSize
+    font-family: $h2Font
+    line-height: $h2LineHeight
+    letter-spacing: $defaultLetterSpacing
+    color: $defaultFontColor
+    display: block
+    @include media(">iphone6")
+      margin-top: 4px
+    @include media(">bigPhone")
+      margin-top: 8px
+    @include media(">bigPhone")
+      margin-top: 10px
+    @include media(">bigPhone")
+      margin-top: -5px
+
+.mainNavigation
+  &.lightColors
+    & .menuToggle
+      border-color: $white
+    & .menuToggle:after
+      color: $white
+    &.open .menuToggle:after
+      color: $defaultFontColor
+    & .navItem
+      @include media(">tablet")
+        color: $white
+
+.navItem
+  text-decoration: none
+  display: block
+  text-align: center
+  margin-top: 100px
+  color: $defaultFontColor
+  font-size: $defaultFontSize * 1.75
+  line-height: $defaultLineHeight * 1.75
+  letter-spacing: $defaultLetterSpacing * 1.75
+  &.active span, &:hover span
+    border-bottom: 3px solid $blue
+  @include media(">tablet")
+    float: left
+    margin: 8px 0 0 100px
+    color: $defaultFontColor
+    font-size: $defaultDesktopFontSize * 1.2
+    line-height: $defaultDesktopLineHeight * 1.1
+    letter-spacing: $defaultDesktopLetterSpacing * 1.2
