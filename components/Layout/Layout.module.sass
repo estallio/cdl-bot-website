@@ -1,0 +1,22 @@
+@import ~include-media/dist/_include-media.scss
+@import styles/variables
+
+.site
+  display: flex
+  min-height: 100vh
+  flex-direction: column
+  background-color: #ffffff
+  overflow: hidden
+
+.main
+  flex: 1
+  display: flex
+  justify-content: center
+
+.center
+  width: 100%
+  z-index: 3
+  padding: 0 30px 0 30px
+  max-width: 1140px
+  @include media(">desktop")
+    padding: 0

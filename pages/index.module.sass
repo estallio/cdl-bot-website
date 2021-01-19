@@ -1,0 +1,306 @@
+@import ~include-media/dist/_include-media.scss
+@import styles/variables
+
+.container
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  h1
+    margin-bottom: 0
+  h2
+    margin-bottom: 0
+
+.researchFields
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    width: 3000px
+    height: 4px
+    background-color: $blue
+    display: block
+    z-index: -1
+
+.supportersAndPartners
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    width: 3000px
+    height: 80%
+    background-color: $blue
+    left: -3010px
+    top: 9%
+    z-index: -1
+
+.welcome
+  color: $white
+  position: relative
+  background-color: $blue
+  padding-right: 6px
+  padding-top: 10px
+  padding-bottom: 4px
+  line-height: 20px
+  display: inline-block
+  @include media(">bigPhone")
+    line-height: 40px
+    padding-right: 6px
+    padding-bottom: 2px
+  &::after
+    content: ''
+    position: absolute
+    width: 3000px
+    height: 100%
+    background-color: $blue
+    left: -2980px
+    top: 0
+    z-index: -1
+    @include media(">bigPhone")
+      height: 100%
+      top: 0
+
+.box
+  margin-bottom: 50px
+  justify-content: center
+  display: flex
+  flex-direction: column
+  & img
+    width: 80%
+    margin: 0 auto
+    display: block
+    @include media(">tablet")
+      width: 100%
+
+.imageOne
+  margin-bottom: 0
+  img
+    @include media(">tablet")
+      margin-left: 50px
+
+.imageBorderPaddingRight
+  @include media(">tablet")
+    padding-right: 160px
+
+.supporterBox
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  width: 40%
+  p
+    width: 100%
+    font-size: 13px
+    line-height: 20px
+    text-align: center
+    margin: 30px auto
+    color: $black
+    text-decoration: underline
+    @include media(">bigPhone")
+      font-size: inherit
+      line-height: inherit
+  @include media(">tablet")
+    img
+      max-width: 300px
+      max-height: 200px
+
+.supporters
+  justify-content: center
+  align-items: center
+  display: flex
+  img
+    max-width: 200px
+    max-height: 200px
+
+.informatics
+  width: 100%
+  @include media(">bigPhone")
+    width: 40%
+
+.oneThird
+  @include media(">tablet")
+    width: 37.5%
+
+.twoThird
+  @include media(">tablet")
+    width: 62.5%
+
+.oneHalf
+  @include media(">tablet")
+    width: 50%
+
+.mobileOrderMinusOne
+  order: -1
+  @include media(">tablet")
+    order: 0
+
+.people
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  h1
+    margin-bottom: 0
+  h2
+    margin-bottom: 0
+  h3
+    margin-bottom: 20px
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      width: 90%
+      height: 4px
+      background-color: $blue
+      display: block
+      z-index: -1
+  p
+    margin: 0
+  &::after
+    width: 100%
+    margin-bottom: 50px
+    margin-top: 20px
+    display: block
+    @include media(">600px")
+      content: ""
+      width: 46%
+    @include media(">1024px")
+      width: 28%
+
+.person
+  // border: 3px solid $blue
+  padding: 15px
+  img
+    margin: 0 auto
+    display: block
+  width: 100%
+  margin-bottom: 40px
+  margin-top: 20px
+  display: block
+  @include media(">600px")
+    width: 46%
+  @include media(">1024px")
+    width: 28%
+
+.research
+  display: flex
+  flex-wrap: wrap
+  flex-direction: column
+  width: 100%
+  margin-bottom: 30px
+  h3
+    margin: 0
+    position: relative
+    font-size: $h3FontSize
+    line-height: $defaultLineHeight
+    color: $black
+    z-index: 10
+    @include media(">bigPhone")
+      font-size: $h3DesktopFontSize
+      line-height: $h3LineHeight
+
+.entry
+  display: flex
+  flex-direction: row
+  width: 100%
+  margin-top: 10px
+  justify-content: space-between
+  font-size: 13px
+  line-height: 17px
+  @include media(">400")
+    font-size: revert
+    line-height: revert
+  &:nth-child(1)
+    margin-top: 0
+    h3::after
+      display: none
+  &:last-child
+    .date::after
+      height: calc(100% - 25px)
+  p
+    margin-top: 5px
+    margin-bottom: 5px
+    z-index: 10
+    position: relative
+  ul
+    padding-inline-start: 15px
+    margin-bottom: 0
+
+.date
+  width: 20%
+  text-align: center
+  padding-top: 19px
+  padding-bottom: 15px
+  font-family: $themeFont
+  font-size: 13px
+  @include media(">750px")
+    padding-top: 24px
+  &::after
+    content: ''
+    height: 100%
+    padding-bottom: 14px
+    width: 1px
+    display: block
+    border-left: 5px dashed $blue
+    margin: 7px auto 5px
+    @include media(">750px")
+      margin-top: 10px
+      padding-bottom: 12px
+  @include media(">400px")
+    width: 20%
+  @include media(">500px")
+    font-family: $themeFont
+    font-size: $h3FontSize
+    width: 16%
+  @include media(">1024px")
+    width: 12%
+
+.info
+  background-color: $white
+  color: $black
+  padding: 6px 8px
+  width: 75%
+  border: 3px solid $blue
+  @include media(">350px")
+    width: 76%
+  @include media(">375px")
+    width: 77%
+  @include media(">400px")
+    width: 79%
+  @include media(">500px")
+    width: 79%
+  @include media(">550px")
+    width: 81%
+  @include media(">600px")
+    width: 83%
+    padding: 10px 12px
+  @include media(">750px")
+    padding: 15px 20px
+    width: 85%
+  @include media(">1024px")
+    width: 90%
+  position: relative
+  &::after
+    z-index: 2
+    position: absolute
+    top: 19px
+    left: -8px
+    transform: rotate(45deg)
+    content: ''
+    width: 10px
+    height: 10px
+    display: block
+    background-color: $white
+    border-left: 3px solid $blue
+    border-bottom: 3px solid $blue
+    @include media(">750px")
+      width: 15px
+      height: 15px
+      top: 21px
+      left: -11px
+
+.download
+  background-color: $darkBlue
+  padding: 10px
+  color: $white
+  margin-top: 10px
+  display: inline-block
+

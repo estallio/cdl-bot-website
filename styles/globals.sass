@@ -1,0 +1,58 @@
+@import reset.scss
+@import ~include-media/dist/_include-media.scss
+@import variables
+
+*
+  box-sizing: border-box
+
+a
+  text-decoration: none
+  cursor: pointer
+
+html, body
+  color: $defaultFontColor
+  font-family: $defaultFont
+  font-size: $defaultFontSize
+  line-height: $defaultLineHeight
+  letter-spacing: $defaultLetterSpacing
+  font-weight: $defaultFontWeight
+  @include media(">bigPhone")
+    font-size: $defaultDesktopFontSize
+    line-height: $defaultDesktopLineHeight
+    letter-spacing: $defaultDesktopLetterSpacing
+
+h1
+  color: $h1Color
+  font-family: $h1Font
+  font-size: $h1FontSize
+  line-height: $h1LineHeight
+  letter-spacing: $h1LetterSpacing
+  font-weight: $h1FontWeight
+  @include media(">bigPhone")
+    font-size: $h1DesktopFontSize
+    line-height: $h1DesktopLineHeight
+    letter-spacing: $h1DesktopLetterSpacing
+
+h2
+  color: $h2Color
+  font-family: $h2Font
+  font-size: $h2FontSize
+  line-height: $h2LineHeight
+  letter-spacing: $h2LetterSpacing
+  font-weight: $h2FontWeight
+  @include media(">bigPhone")
+    font-size: $h2DesktopFontSize
+    line-height: $h2DesktopLineHeight
+    letter-spacing: $h2DesktopLetterSpacing
+
+h3
+  color: $h3Color
+  font-family: $h3Font
+  font-size: $h3FontSize
+  line-height: $h3LineHeight
+  letter-spacing: $h3LetterSpacing
+  font-weight: $h3FontWeight
+  @include media(">bigPhone")
+    font-size: $h3DesktopFontSize
+    line-height: $h3DesktopLineHeight
+    letter-spacing: $h3DesktopLetterSpacing

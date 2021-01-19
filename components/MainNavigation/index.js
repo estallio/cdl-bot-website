@@ -51,6 +51,10 @@ const MainNavigation = () => {
             <span>Research</span>
           </a>
         </Link>
+        <div className={styles.languageSwitcher}>
+          <span>English</span>
+          <span>Deutsch</span>
+        </div>
       </nav>
     </div>
   );

@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import { withTranslation } from '../i18n';
+import { withTranslation } from '../../i18n';
 
 import { NextSeo, SocialProfileJsonLd } from 'next-seo';
 
@@ -40,4 +40,4 @@ Meta.propTypes = {
   description: PropTypes.string,
 };
 
-export default withTranslation(Meta);
+export default withTranslation('miscellaneous')(Meta);
