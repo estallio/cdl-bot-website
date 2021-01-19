@@ -1,10 +1,14 @@
 import React, { useEffect } from 'react';
 
+import { useRouter } from 'next/router';
+
 import Link from '../Link';
 
 import styles from './MainNavigation.module.sass';
 
 const MainNavigation = () => {
+  const { pathname, locale } = useRouter();
+
   useEffect(() => {
     const menuBtn = document.getElementsByClassName(styles.menuToggle)[0];
     const nav = document.getElementsByClassName(styles.mainNavigation)[0];
@@ -52,8 +56,32 @@ const MainNavigation = () => {
           </a>
         </Link>
         <div className={styles.languageSwitcher}>
-          <span>English</span>
-          <span>Deutsch</span>
+          {locale !== 'en' ? (
+            <Link href={`/en${pathname}`} locale="en" key="en">
+              <a
+                onClick={() => {
+                  document.cookie = 'NEXT_LOCALE=en';
+                }}
+              >
+                English
+              </a>
+            </Link>
+          ) : (
+            <span>English</span>
+          )}
+          {locale !== 'de' ? (
+            <Link href={`/de${pathname}`} locale="de" key="de">
+              <a
+                onClick={() => {
+                  document.cookie = 'NEXT_LOCALE=de';
+                }}
+              >
+                Deutsch
+              </a>
+            </Link>
+          ) : (
+            <span>Deutsch</span>
+          )}
         </div>
       </nav>
     </div>
