@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "export": "next export && cp apache/.htaccess out",
-    "lint": "eslint --fix . && echo 'Lint complete.'"
+    "lint": "eslint --fix . && echo 'Lint complete.'",
+    "postinstall": "sh ./miscellaneous/fix-redirect.sh"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
