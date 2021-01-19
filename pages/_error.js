@@ -3,15 +3,17 @@ import PropTypes from 'prop-types';
 
 import Error from 'next/error';
 
+import useTranslation from 'next-translate/useTranslation';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-
-import { withTranslation } from '../i18n';
 
 import Link from '../components/Link';
 import styles from './index.module.sass';
 
-const ErrorPage = ({ statusCode, t }) => {
+const ErrorPage = ({ statusCode }) => {
+  const { t } = useTranslation();
+
   const code = statusCode || 500;
 
   return (
@@ -57,7 +59,6 @@ ErrorPage.getInitialProps = async ({ res, err }) => {
   }
 
   return {
-    namespacesRequired: ['miscellaneous'],
     statusCode,
   };
 };
@@ -68,7 +69,6 @@ ErrorPage.defaultProps = {
 
 ErrorPage.propTypes = {
   statusCode: PropTypes.number,
-  t: PropTypes.func.isRequired,
 };
 
-export default withTranslation('miscellaneous')(ErrorPage);
+export default ErrorPage;

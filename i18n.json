@@ -1,0 +1,10 @@
+{
+  "locales": ["en", "de"],
+  "defaultLocale": "en",
+  "pages": {
+    "*": ["common", "miscellaneous", "footer"],
+    "/": ["home"],
+    "/team": ["team"],
+    "/research": ["research"]
+  }
+}

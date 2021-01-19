@@ -2,9 +2,9 @@ import React, { Children } from 'react';
 
 import { withRouter } from 'next/router';
 
-import classNames from 'classnames';
+import Link from 'next/link';
 
-import { Link } from '../../i18n';
+import classNames from 'classnames';
 
 export default withRouter(
   ({ router, defaultClass, activeClass, children, as, href, ...rest }) => {
