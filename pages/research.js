@@ -7,7 +7,7 @@ import Layout from '../components/Layout';
 import styles from './index.module.sass';
 
 const Research = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('research');
 
   return (
     <Layout>

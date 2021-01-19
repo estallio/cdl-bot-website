@@ -29,7 +29,7 @@ const MainNavigation = () => {
       <div className={styles.menuToggle}></div>
       <nav className={styles.nav}>
         <Link
-          href="/"
+          href={locale + '/'}
           defaultClass={styles.navItem}
           activeClass={styles.active}
         >
@@ -38,7 +38,7 @@ const MainNavigation = () => {
           </a>
         </Link>
         <Link
-          href="/team"
+          href={locale + '/team'}
           defaultClass={styles.navItem}
           activeClass={styles.active}
         >
@@ -47,7 +47,7 @@ const MainNavigation = () => {
           </a>
         </Link>
         <Link
-          href="/research"
+          href={locale + '/research'}
           defaultClass={styles.navItem}
           activeClass={styles.active}
         >

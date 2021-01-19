@@ -2,27 +2,33 @@ import React from 'react';
 
 import Head from 'next/head';
 
+import { useRouter } from 'next/router';
+
 import Header from '../Header';
 import Footer from '../Footer';
 
 import styles from './Layout.module.sass';
 
-const Layout = ({ children }) => (
-  <>
-    <HeadDependencies />
-    <div className={styles.site}>
-      <Header />
-      <div id="main" className={styles.main}>
-        <div className={styles.center}>{children}</div>
+const Layout = ({ children }) => {
+  const { pathname } = useRouter();
+
+  return (
+    <>
+      <HeadDependencies pathname={pathname} />
+      <div className={styles.site}>
+        <Header />
+        <div id="main" className={styles.main}>
+          <div className={styles.center}>{children}</div>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
-  </>
-);
+    </>
+  );
+};
 
 export default Layout;
 
-const HeadDependencies = () => (
+const HeadDependencies = ({ pathname }) => (
   <Head>
     {/* For responsiveness */}
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -35,6 +41,16 @@ const HeadDependencies = () => (
         font-family: 'Kanit', sans-serif;
         font-family: 'Open Sans', sans-serif;
       */
+    />
+    <link
+      rel="alternate"
+      hrefLang="de"
+      href={'http://www.cdl-bot.at/de' + pathname}
+    />
+    <link
+      rel="alternate"
+      hrefLang="en"
+      href={'http://www.cdl-bot.at/en' + pathname}
     />
     {/* Favicon for old IEs */}
     <link rel="shortcut icon" href="/theme/favicons/favicon.ico" />
