@@ -15,9 +15,11 @@ const Research = ({ t }) => (
           <span>11.11.2010</span>
         </div>
         <div className={styles.info}>
-          <h3>Entry 1</h3>
+          <h3>Entry 1 Entry 1 Entry 1Entry 1Entry 1Entry 1Entry1Entry1Entry1Entry11Entry 1Entry 1Entry 1Entry1Entry1Entry1Entry11Entry 1Entry 1Entry 1Entry1Entry1Entry1Entry1</h3>
           <p>Text</p>
           <ul>
+            <li>1st price somewhere 1st price somewhere 1st price somewhere</li>
+            <li>1st price somewhere 1st price somewhere 1st price somewhere1st price somewhere 1st price somewhere 1st price somewhere1st price somewhere 1st price somewhere 1st price somewhere</li>
             <li>1st price somewhere 1st price somewhere 1st price somewhere</li>
           </ul>
           <a className={styles.download}>Download</a>

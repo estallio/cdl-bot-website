@@ -205,9 +205,9 @@
   justify-content: space-between
   font-size: 13px
   line-height: 17px
-  @include media(">400")
-    font-size: revert
-    line-height: revert
+  @include media(">bigPhone")
+    font-size: $defaultDesktopFontSize
+    line-height: $defaultDesktopLineHeight
   &:nth-child(1)
     margin-top: 0
     h3::after
@@ -231,8 +231,8 @@
   padding-bottom: 15px
   font-family: $themeFont
   font-size: 13px
-  @include media(">750px")
-    padding-top: 24px
+  @include media(">bigPhone")
+    padding-top: 17px
   &::after
     content: ''
     height: 100%
@@ -241,9 +241,9 @@
     display: block
     border-left: 5px dashed $blue
     margin: 7px auto 5px
-    @include media(">750px")
-      margin-top: 10px
-      padding-bottom: 12px
+    @include media(">bigPhone")
+      margin-top: 4px
+      padding-bottom: 4px
   @include media(">400px")
     width: 20%
   @include media(">500px")
@@ -272,7 +272,7 @@
   @include media(">600px")
     width: 83%
     padding: 10px 12px
-  @include media(">750px")
+  @include media(">bigPhone")
     padding: 15px 20px
     width: 85%
   @include media(">1024px")
@@ -291,7 +291,7 @@
     background-color: $white
     border-left: 3px solid $blue
     border-bottom: 3px solid $blue
-    @include media(">750px")
+    @include media(">bigPhone")
       width: 15px
       height: 15px
       top: 21px
@@ -303,4 +303,5 @@
   color: $white
   margin-top: 10px
   display: inline-block
-
+  @include media(">bigPhone")
+    margin-top: 25px
