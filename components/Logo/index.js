@@ -8,10 +8,10 @@ import styles from './Logo.module.sass';
 
 const Logo = () => {
   const { locale } = useRouter();
-  
+
   return (
     <div className={styles.logo}>
-      <Link href={locale + '/'}>
+      <Link href={'/' + locale}>
         <a>
           <img
             style={{ width: '105%' }}

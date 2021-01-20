@@ -29,7 +29,7 @@ const MainNavigation = () => {
       <div className={styles.menuToggle}></div>
       <nav className={styles.nav}>
         <Link
-          href={locale + '/'}
+          href={'/' + locale}
           defaultClass={styles.navItem}
           activeClass={styles.active}
         >
@@ -38,7 +38,7 @@ const MainNavigation = () => {
           </a>
         </Link>
         <Link
-          href={locale + '/team'}
+          href={'/' + locale + '/team'}
           defaultClass={styles.navItem}
           activeClass={styles.active}
         >
@@ -47,7 +47,7 @@ const MainNavigation = () => {
           </a>
         </Link>
         <Link
-          href={locale + '/research'}
+          href={'/' + locale + '/research'}
           defaultClass={styles.navItem}
           activeClass={styles.active}
         >
@@ -57,7 +57,7 @@ const MainNavigation = () => {
         </Link>
         <div className={styles.languageSwitcher}>
           {locale !== 'en' ? (
-            <Link href={`/en${pathname}`} locale="en" key="en">
+            <Link href={`/en${pathname}`.replace(/\/$/, '')} locale="en" key="en">
               <a
                 onClick={() => {
                   document.cookie = 'NEXT_LOCALE=en';
@@ -70,7 +70,7 @@ const MainNavigation = () => {
             <span>English</span>
           )}
           {locale !== 'de' ? (
-            <Link href={`/de${pathname}`} locale="de" key="de">
+            <Link href={`/de${pathname}`.replace(/\/$/, '')} locale="de" key="de">
               <a
                 onClick={() => {
                   document.cookie = 'NEXT_LOCALE=de';
