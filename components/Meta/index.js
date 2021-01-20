@@ -52,7 +52,7 @@ const Meta = ({ title, description }) => {
           description: description,
           images: [
             {
-              url: 'https://cdl-bot-website.vercel.app/theme/images/logo.png',
+              url: 'https://cdl-bot-website.vercel.app/theme/images/open-graph-image.png',
               alt: 'CDL-BOT Logo',
             },
           ],
