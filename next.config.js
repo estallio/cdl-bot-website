@@ -1,15 +1,18 @@
 const withOptimizedImages = require('next-optimized-images');
-const nextTranslate = require('next-translate');
+const { nextI18NextRewrites } = require('next-i18next/rewrites');
 
-module.exports = nextTranslate(
-  withOptimizedImages({
-    optimizeImagesInDev: true,
-    responsive: {
-      adapter: require('responsive-loader/sharp'),
-    },
-    i18n: {
-      locales: ['en', 'de'],
-      defaultLocale: 'en',
-    },
-  })
-);
+const localeSubpaths = {
+  de: 'de',
+  en: 'en',
+};
+
+module.exports = withOptimizedImages({
+  optimizeImagesInDev: true,
+  responsive: {
+    adapter: require('responsive-loader/sharp'),
+  },
+  rewrites: async () => nextI18NextRewrites(localeSubpaths),
+  publicRuntimeConfig: {
+    localeSubpaths,
+  },
+});

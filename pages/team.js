@@ -1,6 +1,6 @@
 import React from 'react';
 
-import useTranslation from 'next-translate/useTranslation';
+import { useTranslation } from '../i18n';
 
 import Layout from '../components/Layout';
 
@@ -104,5 +104,9 @@ const Team = () => {
     </Layout>
   );
 };
+
+Team.getInitialProps = async () => ({
+  namespacesRequired: ['team', 'miscellaneous', 'footer'],
+});
 
 export default Team;

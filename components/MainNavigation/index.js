@@ -2,12 +2,17 @@ import React, { useEffect } from 'react';
 
 import { useRouter } from 'next/router';
 
+import { useTranslation } from '../../i18n';
+
 import Link from '../Link';
 
 import styles from './MainNavigation.module.sass';
 
 const MainNavigation = () => {
-  const { pathname, locale } = useRouter();
+  const {
+    i18n: { language, changeLanguage },
+  } = useTranslation();
+  const { pathname } = useRouter();
 
   useEffect(() => {
     const menuBtn = document.getElementsByClassName(styles.menuToggle)[0];
@@ -29,7 +34,7 @@ const MainNavigation = () => {
       <div className={styles.menuToggle}></div>
       <nav className={styles.nav}>
         <Link
-          href={'/' + locale}
+          href="/"
           defaultClass={styles.navItem}
           activeClass={styles.active}
         >
@@ -38,7 +43,7 @@ const MainNavigation = () => {
           </a>
         </Link>
         <Link
-          href={'/' + locale + '/team'}
+          href="/team"
           defaultClass={styles.navItem}
           activeClass={styles.active}
         >
@@ -47,7 +52,7 @@ const MainNavigation = () => {
           </a>
         </Link>
         <Link
-          href={'/' + locale + '/research'}
+          href="/research"
           defaultClass={styles.navItem}
           activeClass={styles.active}
         >
@@ -56,11 +61,12 @@ const MainNavigation = () => {
           </a>
         </Link>
         <div className={styles.languageSwitcher}>
-          {locale !== 'en' ? (
-            <Link href={`/en${pathname}`.replace(/\/$/, '')} locale="en" key="en">
+          {language !== 'en' ? (
+            <Link href={pathname} key="en">
               <a
                 onClick={() => {
                   document.cookie = 'NEXT_LOCALE=en';
+                  changeLanguage('en');
                 }}
               >
                 English
@@ -69,11 +75,12 @@ const MainNavigation = () => {
           ) : (
             <span>English</span>
           )}
-          {locale !== 'de' ? (
-            <Link href={`/de${pathname}`.replace(/\/$/, '')} locale="de" key="de">
+          {language !== 'de' ? (
+            <Link href={pathname} key="de">
               <a
                 onClick={() => {
                   document.cookie = 'NEXT_LOCALE=de';
+                  changeLanguage('de');
                 }}
               >
                 Deutsch

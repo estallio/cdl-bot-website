@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Error from 'next/error';
 
-import useTranslation from 'next-translate/useTranslation';
+import { useTranslation } from '../i18n';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
@@ -12,7 +12,7 @@ import Link from '../components/Link';
 import styles from './index.module.sass';
 
 const ErrorPage = ({ statusCode }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('');
 
   const code = statusCode || 500;
 
@@ -60,6 +60,7 @@ ErrorPage.getInitialProps = async ({ res, err }) => {
 
   return {
     statusCode,
+    namespacesRequired: ['miscellaneous'],
   };
 };
 

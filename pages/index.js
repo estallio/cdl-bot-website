@@ -2,7 +2,7 @@ import React from 'react';
 
 import classNames from 'classnames';
 
-import useTranslation from 'next-translate/useTranslation';
+import { useTranslation } from '../i18n';
 
 import Layout from '../components/Layout';
 
@@ -174,5 +174,9 @@ const Home = () => {
     </Layout>
   );
 };
+
+Home.getInitialProps = async () => ({
+  namespacesRequired: ['home', 'miscellaneous', 'footer'],
+});
 
 export default Home;

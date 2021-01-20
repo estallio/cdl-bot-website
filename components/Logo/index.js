@@ -1,17 +1,13 @@
 import React from 'react';
 
-import { useRouter } from 'next/router';
-
 import Link from '../Link';
 
 import styles from './Logo.module.sass';
 
 const Logo = () => {
-  const { locale } = useRouter();
-
   return (
     <div className={styles.logo}>
-      <Link href={'/' + locale}>
+      <Link href="/">
         <a>
           <img
             style={{ width: '105%' }}

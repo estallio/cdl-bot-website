@@ -1,6 +1,6 @@
 import React from 'react';
 
-import useTranslation from 'next-translate/useTranslation';
+import { useTranslation } from '../i18n';
 
 import Layout from '../components/Layout';
 
@@ -60,5 +60,9 @@ const Research = () => {
     </Layout>
   );
 };
+
+Research.getInitialProps = async () => ({
+  namespacesRequired: ['research', 'miscellaneous', 'footer'],
+});
 
 export default Research;
