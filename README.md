@@ -68,3 +68,4 @@ git push
 ## TODO
 * If a second domain is used, a `canonical` tag must be specified to prevent search engines from blocking duplicate content
 * It is better if the default domain redirects to the `www` subdomain
+* Add sameAs-links in the meta-component

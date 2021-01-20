@@ -2,19 +2,15 @@ import React from 'react';
 
 import Head from 'next/head';
 
-import { useRouter } from 'next/router';
-
 import Header from '../Header';
 import Footer from '../Footer';
 
 import styles from './Layout.module.sass';
 
 const Layout = ({ children }) => {
-  const { pathname } = useRouter();
-
   return (
     <>
-      <HeadDependencies pathname={pathname} />
+      <HeadDependencies />
       <div className={styles.site}>
         <Header />
         <div id="main" className={styles.main}>
@@ -28,7 +24,7 @@ const Layout = ({ children }) => {
 
 export default Layout;
 
-const HeadDependencies = ({ pathname }) => (
+const HeadDependencies = () => (
   <Head>
     {/* For responsiveness */}
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -41,16 +37,6 @@ const HeadDependencies = ({ pathname }) => (
         font-family: 'Kanit', sans-serif;
         font-family: 'Open Sans', sans-serif;
       */
-    />
-    <link
-      rel="alternate"
-      hrefLang="de"
-      href={'http://www.cdl-bot.at/de' + pathname}
-    />
-    <link
-      rel="alternate"
-      hrefLang="en"
-      href={'http://www.cdl-bot.at/en' + pathname}
     />
     {/* Favicon for old IEs */}
     <link rel="shortcut icon" href="/theme/favicons/favicon.ico" />
