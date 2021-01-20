@@ -5,7 +5,7 @@ This repository contains a nextjs website template for [cdl-bot.at](https://cdl-
 ![Screenshot](img/Screenshot.png)
 
 ## Add team member
-1. Add a photo in the folder `public/images/team/` that approximately fits the aspect ratio 3:4 in portrait-mode.
+1. Add a photo in the folder `public/images/team/` that approximately fits the aspect ratio 3:4 in portrait-mode (be careful that the images are not too big in size, i.e. < 500 KB or even less).
 2. Add an entry to `public/content/team.json` like so:
 ```
 {
@@ -70,3 +70,4 @@ git push
 * It is better if the default domain redirects to the `www` subdomain
 * Add sameAs-links in the meta-component
 * Insert nice titles and descriptions for meaningful indexing (mention TU Vienna somewhere etc...)
+* Change data like needed (contact, email etc.)
