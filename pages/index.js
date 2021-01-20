@@ -7,6 +7,7 @@ import { useTranslation } from '../i18n';
 import Layout from '../components/Layout';
 
 import styles from './index.module.sass';
+import Research from './research'
 
 const Home = () => {
   const { t } = useTranslation('home');
@@ -175,8 +176,8 @@ const Home = () => {
   );
 };
 
-Home.getInitialProps = async () => ({
-  namespacesRequired: ['home', 'miscellaneous', 'footer'],
-});
+Home.defaultProps = {
+  i18nNamespaces: ['home', 'miscellaneous', 'footer'],
+};
 
 export default Home;

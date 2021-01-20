@@ -61,12 +61,12 @@ ErrorPage.getInitialProps = async ({ res, err }) => {
 
   return {
     statusCode,
-    namespacesRequired: ['miscellaneous'],
   };
 };
 
 ErrorPage.defaultProps = {
   statusCode: null,
+  i18nNamespaces: ['research', 'miscellaneous', 'footer'],
 };
 
 ErrorPage.propTypes = {
