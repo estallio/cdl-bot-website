@@ -9,15 +9,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 import Link from '../components/Link';
+
 import styles from './index.module.sass';
 
 const ErrorPage = ({ statusCode }) => {
-  const { t } = useTranslation('');
+  const { t } = useTranslation('miscellaneous');
 
   const code = statusCode || 500;
 
   return (
-    <div>
+    <div className={styles.error}>
       <Error statusCode={code} />
       <Link href="/">
         <a

@@ -1,6 +1,15 @@
 @import ~include-media/dist/_include-media.scss
 @import styles/variables
 
+.error
+  h2
+    display: block
+    margin-top: 2px !important
+    @include media(">768px")
+      margin-top: 10px !important
+  a
+    color: $darkBlue
+
 .container
   display: flex
   flex-wrap: wrap
