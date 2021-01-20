@@ -1,0 +1,29 @@
+{
+  "team": [
+    {
+      "imagePath": "/images/team/stefan.jpg",
+      "name": "Dr.-Ing. Stefan Schulte",
+      "info": "Stefan is Associate Professor at TU Wien and head of CDL-BOT."
+    },
+    {
+      "imagePath": "/images/team/michael.jpg",
+      "name": "Dipl.-Ing. Michael Sober",
+      "info": "Michael..."
+    },
+    {
+      "imagePath": "/images/team/giulia.jpg",
+      "name": "MSc Giulia Scaffino",
+      "info": "Giulia..."
+    },
+    {
+      "imagePath": "/images/team/giulia.jpg",
+      "name": "Bsc Theresa Müller",
+      "info": "Theresa..."
+    },
+    {
+      "imagePath": "/images/team/michael.jpg",
+      "name": "Bsc Leonhard Esterbauer",
+      "info": "Leonhard..."
+    }
+  ]
+}
