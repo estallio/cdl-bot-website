@@ -9,11 +9,11 @@ This repository contains a nextjs website template for [cdl-bot.at](https://cdl-
 2. Add an entry to `public/content/team.json` like so:
 ```
 {
-    "imagePath": "/images/team/stefan.jpg", // path to image in public folder without the 'public' folder in path
-    "name": "Dr.-Ing. Stefan Schulte", // name of the person
-    "info": "Stefan is Associate Professor at TU Wien and head of CDL-BOT." // fallback-info of the person if the right language is not specified
-    "en-info": "Stefan is Associate Professor...", // (optional) info of the person in english - if not specified, delete the property completely so no emtpy text will be rendered
-    "de-info": "Stefan ist Associate Professor...", // (optional) same as above for german
+    "imagePath": "/images/team/john.jpg", // path to image in public folder without the 'public' folder in path
+    "name": "PhD. John Doe", // name of the person
+    "info": "John is Associate Professor at TU Wien and head of CDL-BOT." // fallback-info of the person if the right language is not specified
+    "en-info": "John is Associate Professor...", // (optional) info of the person in english - if not specified, delete the property completely so no emtpy text will be rendered
+    "de-info": "John ist Associate Professor...", // (optional) same as above for german
 }
 ```
 3. Commit the changes and push (will trigger deploy):
