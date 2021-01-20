@@ -1,6 +1,6 @@
 import React from 'react';
 
-import useTranslation from 'next-translate/useTranslation';
+import { useTranslation } from '../../i18n';
 
 import styles from './FooterImprint.module.sass';
 
