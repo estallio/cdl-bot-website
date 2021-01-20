@@ -65,7 +65,6 @@ const MainNavigation = () => {
             <Link href={pathname} key="en">
               <a
                 onClick={() => {
-                  document.cookie = 'NEXT_LOCALE=en';
                   changeLanguage('en');
                 }}
               >
@@ -79,7 +78,6 @@ const MainNavigation = () => {
             <Link href={pathname} key="de">
               <a
                 onClick={() => {
-                  document.cookie = 'NEXT_LOCALE=de';
                   changeLanguage('de');
                 }}
               >
