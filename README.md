@@ -66,8 +66,9 @@ git push
 * Until now an old solution is beeing used and for merging server-side data fetching and translating, a hacky solution from (here)[https://github.com/isaachinman/next-i18next/issues/652#issuecomment-644618517] is used
 
 ## TODO
-* If a second domain is used, a `canonical` tag must be specified to prevent search engines from blocking duplicate content
-* It is better if the default domain redirects to the `www` subdomain
-* Add sameAs-links in the meta-component
-* Insert nice titles and descriptions for meaningful indexing (mention TU Vienna somewhere etc...)
-* Change data like needed (contact, email etc.)
+* [x] Use "‑" instead of "-" to prevent line-breaks (different ascii char)
+* [ ] If a second domain is used, a `canonical` tag must be specified to prevent search engines from blocking duplicate content
+* [x] It is better if the default domain redirects to the `www` subdomain
+* [ ] Add sameAs-links in the meta-component
+* [ ] Insert nice titles and descriptions for meaningful indexing (mention TU Vienna somewhere etc...)
+* [ ] Change data like needed (contact, email etc.)

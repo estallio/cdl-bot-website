@@ -129,7 +129,7 @@ const Home = () => {
               rel="noreferrer"
             >
               <img
-                src="/images/supporters-and-partners/iota-foundation.jpg"
+                src="/images/supporters-and-partners/iota-foundation.png"
                 alt="IOTA Foundation Logo"
               />
               <p>IOTA Foundation</p>
@@ -170,7 +170,7 @@ const Home = () => {
               rel="noreferrer"
             >
               <img
-                src="/images/supporters-and-partners/tu-wien-informatics.jpg"
+                src="/images/supporters-and-partners/tu-wien-informatics.png"
                 alt="TU Wien Informatics Logo"
               />
               <p>TU Wien Informatics</p>
