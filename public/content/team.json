@@ -10,25 +10,25 @@
       "imagePath": "/images/team/michael.jpg",
       "name": "Dipl.-Ing. Michael Sober",
       "email": "m.sober@dsg.tuwien.ac.at",
-      "info": "Michael..."
+      "info": "Michael is a research assistant and PhD student at the Distributed Systems Group of the Institute of Information Systems Engineering at TU Wien. After finishing his bachelor studies in Software & Information Engineering in 2018, he received his master's degree in Software Engineering/Internet Computing from TU Wien in 2020."
     },
     {
       "imagePath": "/images/team/giulia.jpg",
-      "name": "MSc Giulia Scaffino",
+      "name": "Giulia Scaffino, MSc",
       "email": "giulia.scaffino@tuwien.ac.at",
-      "info": "Giulia Scaffino is a PhD student at TUWien. After her MSc degree in Nuclear Physics in 2019, she now works in the Distributed Systems Group of the Institute of Information Systems Engineering."
+      "info": "Giulia Scaffino is a PhD student at TU Wien. After her MSc degree in Nuclear Physics in 2019, she now works in the Distributed Systems Group of the Institute of Information Systems Engineering."
     },
     {
       "imagePath": "/images/team/giulia.jpg",
-      "name": "Bsc Theresa Müller",
+      "name": "Theresa Müller, BSc",
       "email": "mueller.theresa.c@gmail.com",
-      "info": "Theresa..."
+      "info": "Theresa Müller supports the CDL-BOT team as university assistant and is currently studying Software Engineering and Internet Computing at TU Wien. Before, she finished her BSc in Media Informatics at LMU München in 2019."
     },
     {
       "imagePath": "/images/team/michael.jpg",
-      "name": "Bsc Leonhard Esterbauer",
+      "name": "Leonhard Esterbauer, BSc",
       "email": "leonhard.esterbauer@tuwien.ac.at",
-      "info": "Leonhard..."
+      "info": "Leonhard Esterbauer supports the CDL-BOT team as university assistant and is currently studying Software Engineering and Internet Computing at TU Wien. Before, he finished his BSc in Software Engineering at TU Wien in 2019."
     }
   ]
 }
