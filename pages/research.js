@@ -20,6 +20,9 @@ const Research = ({ researchData }) => {
     <>
       <Meta title={t('title')} description={t('description')} />
       <Layout>
+        <h1>
+          <span className={styles.pageHeading}>Research</span>
+        </h1>
         <div className={styles.research}>
           {researchData.map((entry, i) => {
             const title = entry[language + '-title'] || entry.title;

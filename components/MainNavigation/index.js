@@ -60,6 +60,15 @@ const MainNavigation = () => {
             <span>Research</span>
           </a>
         </Link>
+        <Link
+          href="/publications"
+          defaultClass={styles.navItem}
+          activeClass={styles.active}
+        >
+          <a>
+            <span>{language === 'de' ? 'Publikationen' : 'Publications'}</span>
+          </a>
+        </Link>
         <div className={styles.languageSwitcher}>
           {language !== 'en' ? (
             <Link href={pathname} key="en">

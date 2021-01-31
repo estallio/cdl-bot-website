@@ -15,4 +15,13 @@ const fetchResearchData = () => {
   return JSON.parse(fileContents).research;
 };
 
-export { fetchTeamData, fetchResearchData };
+const publicationsDataContentFile = path.join(
+  contentDirectory,
+  'publications.json'
+);
+const fetchPublicationsData = () => {
+  const fileContents = fs.readFileSync(publicationsDataContentFile, 'utf8');
+  return JSON.parse(fileContents).publications;
+};
+
+export { fetchTeamData, fetchResearchData, fetchPublicationsData };

@@ -1,0 +1,13 @@
+{
+  "publications": [
+    {
+      "text": "Karagiannis, V., & Schulte, S. (2021). Distributed Algorithms Based on Proximity for Self-Organizing Fog Computing Systems (accepted for publication). Pervasive and Mobile Computing, NN, NN–NN.",
+      "paper": "https://doi.org/10.1016/j.pmcj.2020.101316"
+    },
+    {
+      "text": "Waibel, P., Hochreiner, C., Schulte, S., Koschmider, A., & Mendling, J. (2020). ViePEP-C: A Container-based Elastic Process Platform (accepted for publication). IEEE Transactions on Cloud Computing, NN(NN), NN-NN.",
+      "paper": "https://doi.org/10.1109/TCC.2019.2912613",
+      "preprint": "https://dsg.tuwien.ac.at/team/sschulte/paper/2019_WHS+19.pdf"
+    }
+  ]
+}

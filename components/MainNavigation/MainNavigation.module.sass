@@ -24,7 +24,7 @@
   color: $white
   span:nth-child(2), a:nth-child(2)
     margin-left: 30px
-  @include media(">tablet")
+  @include media(">1024px")
     position: absolute
     background-color: $blue
     padding: 8px 15px 1px 16px
@@ -53,7 +53,7 @@
   z-index: 90
   font-family: $themeFont
   transition: visibility 0.25s, opacity 0.25s linear
-  @include media(">tablet")
+  @include media(">1024px")
     overflow: visible
     top: 0
     width: auto
@@ -71,7 +71,7 @@
   float: right
   position: relative
   z-index: 100
-  @include media(">tablet")
+  @include media(">1024px")
     display: none
   &:after
     margin-top: -2px
@@ -100,7 +100,7 @@
     &.open .menuToggle:after
       color: $defaultFontColor
     & .navItem
-      @include media(">tablet")
+      @include media(">1024px")
         color: $white
 
 .navItem
@@ -114,10 +114,12 @@
   letter-spacing: $defaultLetterSpacing * 1.75
   &.active span, &:hover span
     border-bottom: 3px solid $blue
-  @include media(">tablet")
+  @include media(">1024px")
     float: left
-    margin: 8px 0 0 100px
+    margin: 8px 0 0 73px
     color: $defaultFontColor
     font-size: $defaultDesktopFontSize * 1.2
     line-height: $defaultDesktopLineHeight * 1.1
     letter-spacing: $defaultDesktopLetterSpacing * 1.2
+  @include media(">desktop")
+    margin-left: 100px

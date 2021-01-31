@@ -20,15 +20,20 @@ const Team = ({ teamData }) => {
     <>
       <Meta title={t('title')} description={t('description')} />
       <Layout>
+        <h1>
+          <span className={styles.pageHeading}>Team</span>
+        </h1>
         <div className={styles.people}>
           {teamData.map((person, i) => {
             const name = person[language + '-name'] || person.name;
             const info = person[language + '-info'] || person.info;
+            const email = person.email;
 
             return (
               <div className={styles.person} key={i}>
                 <img src={person.imagePath} />
                 <h3>{name}</h3>
+                {email && <p className={styles.email}>{email}</p>}
                 <p>{info}</p>
               </div>
             );
