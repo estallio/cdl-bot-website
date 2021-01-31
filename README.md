@@ -83,6 +83,7 @@ git push
 * If the redirection from [here](https://github.com/vercel/next.js/discussions/18419) is implemented, we could change to this approach and make use of [this](https://github.com/vinissimus/next-translate) library (this approach brings also performance benefits)
 * There is also a discussion going on if static export should be supported with nextjs, maybe implement this if its integrated
 * Until now an old solution is beeing used and for merging server-side data fetching and translating, a hacky solution from [here](https://github.com/isaachinman/next-i18next/issues/652#issuecomment-644618517) is used
+* Currently, the DNS requests to `http://cdl-bot.at` is resolved to a web space containing the `.htaccess` file from the miscellaneous folder that redirects to the subdomain `http://www.cdl-bot.at`.
 
 ## TODO
 * [x] Use "‑" instead of "-" to prevent line-breaks (different ascii char)
