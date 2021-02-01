@@ -1,12 +1,15 @@
 {
   "research": [
     {
-      "date": "95.11.2020",
-      "title": "Best Paper Award at Blockchain 2020",
-      "info": "Smart Contract Interoperability Abstract...",
-      "announcements": [
-        "Congratulations to Tamara Brandstätter, Stefan Schulte, Jürgen Cito and Michael Borkowski for winning the Best Paper Award for their paper Characterizing Efficiency Optimizations in Solidity Smart Contracts at the 3rd IEEE International Conference on Blockchain, which is the top conference in the field of blockchain research."
+      "date": "05.11.2020",
+      "en-title": "Best Paper Award at Blockchain 2020",
+	  "de-title": "Best Paper Award der Blockchain 2020",
+      "en-announcements": [
+        "Congratulations to Tamara Brandstätter, Stefan Schulte, Jürgen Cito and Michael Borkowski for winning the Best Paper Award for their paper \"Characterizing Efficiency Optimizations in Solidity Smart Contracts\" at the 3rd IEEE International Conference on Blockchain, which is the top conference in the field of blockchain research."
       ],
+	  "de-announcements": [
+		"Wir beglückwünschen Tamara Brandstätter, Stefan Schulte, Jürgen Cito und Michael Borkowski für die Auszeichnung mit dem Best Paper Award der 3rd IEEE International Conference on Blockchain für das Paper \"Characterizing Efficiency Optimizations in Solidity Smart Contracts\"."
+	  ],
       "download": "https://dsg.tuwien.ac.at/team/sschulte/paper/bc2020.pdf"
     }
   ]
