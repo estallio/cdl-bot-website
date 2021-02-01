@@ -23,5 +23,16 @@
 		"Die Paper \"Characterizing Efficiency Optimizations in Solidity Smart Contracts\" und \"ETH Relay: A Cost-Efficient Relay for Ethereum-Based Blockchains\" wurden von Dr.-Ing. Stefan Schulte auf der 3rd IEEE International Conference on Blockchain präsentiert. Es handelt sich bei dieser Konferenz um die wichtigste Konferenz für Blockchain-Forscher. Im Jahr 2020 betrug die Annahmequote 16%."
 	  ]
     }	
+	{
+      "date": "01.11.2020",
+      "en-title": "Official start of CDL-BOT",
+	  "de-title": "Offizieller Start von CDL-BOT",
+      "en-announcements": [
+        "We are very happy to announce that today, the Christian Doppler Laboratory Blockchain Technologies for the Internet of Things (CDL-BOT) has started. We want to thank our partners Pantos and IOTA as well as the Christian Doppler Research Association for their support. We are looking forward to do groundbreaking research in the field of blockchains and other Distributed Ledger Technologies (DLTs) for the IoT."
+      ],
+	  "de-announcements": [
+		"Wir freuen uns sehr, dass heute das Christian Doppler Labor Blockchaintechnologien für das Internet der Dinge (CDL-BOT) offiziell gestartet ist. Wir bedanken uns insbesondere bei unseren Partnern Pantos und IOTA sowie der Christian Doppler Forschungsgesellschaft für die Unterstützung. Wir freuen uns auf wegweisende Forschung im Bereich Blockchains und Distributed Ledger Technologies (DLTs) für das IoT."
+	  ]
+    }	
   ]
 }
