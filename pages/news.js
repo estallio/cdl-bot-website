@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useTranslation } from '../i18n';
 
-import { fetchResearchData } from '../miscellaneous/dataFetcher';
+import { fetchNewsData } from '../miscellaneous/dataFetcher';
 
 import Meta from '../components/Meta';
 
@@ -10,21 +10,21 @@ import Layout from '../components/Layout';
 
 import styles from './index.module.sass';
 
-const Research = ({ researchData }) => {
+const News = ({ newsData }) => {
   const {
     i18n: { language },
     t,
-  } = useTranslation('research');
+  } = useTranslation('news');
 
   return (
     <>
       <Meta title={t('title')} description={t('description')} />
       <Layout>
         <h1>
-          <span className={styles.pageHeading}>Research</span>
+          <span className={styles.pageHeading}>News</span>
         </h1>
-        <div className={styles.research}>
-          {researchData.map((entry, i) => {
+        <div className={styles.news}>
+          {newsData.map((entry, i) => {
             const title = entry[language + '-title'] || entry.title;
             const info = entry[language + '-info'] || entry.info;
             const announcements =
@@ -65,18 +65,18 @@ const Research = ({ researchData }) => {
   );
 };
 
-Research.defaultProps = {
-  i18nNamespaces: ['research', 'miscellaneous', 'footer'],
+News.defaultProps = {
+  i18nNamespaces: ['news', 'miscellaneous', 'footer'],
 };
 
 export async function getServerSideProps() {
-  const researchData = fetchResearchData();
+  const newsData = fetchNewsData();
 
   return {
     props: {
-      researchData,
+      newsData,
     },
   };
 }
 
-export default Research;
+export default News;

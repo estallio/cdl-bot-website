@@ -9,10 +9,10 @@ const fetchTeamData = () => {
   return JSON.parse(fileContents).team;
 };
 
-const researchDataContentFile = path.join(contentDirectory, 'research.json');
-const fetchResearchData = () => {
-  const fileContents = fs.readFileSync(researchDataContentFile, 'utf8');
-  return JSON.parse(fileContents).research;
+const newsDataContentFile = path.join(contentDirectory, 'news.json');
+const fetchNewsData = () => {
+  const fileContents = fs.readFileSync(newsDataContentFile, 'utf8');
+  return JSON.parse(fileContents).news;
 };
 
 const publicationsDataContentFile = path.join(
@@ -24,4 +24,4 @@ const fetchPublicationsData = () => {
   return JSON.parse(fileContents).publications;
 };
 
-export { fetchTeamData, fetchResearchData, fetchPublicationsData };
+export { fetchTeamData, fetchNewsData, fetchPublicationsData };

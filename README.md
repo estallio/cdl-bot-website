@@ -24,8 +24,8 @@ git push
 ```
 4. Wait about 1-2min until Vercel redeployed the page.
 
-## Add research work
-1. Add an entry to `public/content/research.json` like so:
+## Add news
+1. Add an entry to `public/content/news.json` like so:
 ```
 {
     "date": "22.10.2020", // date of the work or publication
@@ -53,7 +53,7 @@ git push
 3. Commit the changes and push (will trigger deploy):
 ```
 git add *
-git commit -m "added new work"
+git commit -m "added news"
 git push
 ```
 4. Wait about 1-2min until Vercel redeployed the page.
@@ -72,7 +72,7 @@ git push
 3. Commit the changes and push (will trigger deploy):
 ```
 git add *
-git commit -m "added new work"
+git commit -m "added publication"
 git push
 ```
 4. Wait about 1-2min until Vercel redeployed the page.

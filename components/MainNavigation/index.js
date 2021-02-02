@@ -52,12 +52,12 @@ const MainNavigation = () => {
           </a>
         </Link>
         <Link
-          href="/research"
+          href="/news"
           defaultClass={styles.navItem}
           activeClass={styles.active}
         >
           <a>
-            <span>Research</span>
+            <span>News</span>
           </a>
         </Link>
         <Link

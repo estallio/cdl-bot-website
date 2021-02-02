@@ -66,7 +66,7 @@ ErrorPage.getInitialProps = async ({ res, err }) => {
 
 ErrorPage.defaultProps = {
   statusCode: null,
-  i18nNamespaces: ['research', 'miscellaneous', 'footer'],
+  i18nNamespaces: ['miscellaneous', 'footer'],
 };
 
 ErrorPage.propTypes = {
