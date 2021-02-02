@@ -28,19 +28,35 @@ const Publications = ({ publicationsData }) => {
         <ol className={styles.publications}>
           {publicationsData.map((entry, i) => {
             const text = entry.text;
+            const abstract = entry.abstract;
             const paper = entry.paper;
             const preprint = entry.preprint;
 
             return (
               <li className={styles.publication} key={i}>
-                {text}
+                {text && text}
+                {abstract && (
+                  <>
+                    <span>&nbsp;</span>
+                    <a
+                      alt={'Link to Abstract'}
+                      target="_blank"
+                      rel="noreferrer"
+                      href={abstract}
+                      className={styles.paper}
+                    >
+                      Abstract
+                    </a>
+                  </>
+                )}
                 {paper && (
                   <>
                     <span>&nbsp;</span>
                     <a
-                      alt={'Paper Download'}
+                      alt={'Link to Paper'}
                       target="_blank"
                       rel="noreferrer"
+                      href={paper}
                       className={styles.paper}
                     >
                       Paper
@@ -51,9 +67,10 @@ const Publications = ({ publicationsData }) => {
                   <>
                     <span>&nbsp;</span>
                     <a
-                      alt={'Preprint Download'}
+                      alt={'Link to Preprint'}
                       target="_blank"
                       rel="noreferrer"
+                      href={preprint}
                       className={styles.paper}
                     >
                       Preprint

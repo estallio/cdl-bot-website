@@ -63,8 +63,9 @@ git push
 ```
 {
     "text": "Doe, J.Some Topic etc.",
-    "paper": "https://...../paper.pdf" // download-link of the paper - if no download is available, simply remove the whole property, so no empty download button will be rendered
-    "preprint": "https://...../paper.pdf" // download-link of the preprint - if no preprint is available, simply remove the whole property, so no empty download button will be rendered
+    "abstract": "https://...../paper.pdf" // link to the abstract of the paper - if no abstract is available, simply remove the whole property, so no empty download button will be rendered
+    "paper": "https://...../paper.pdf" // link to the paper - if no paper is available, simply remove the whole property, so no empty download button will be rendered
+    "preprint": "https://...../paper.pdf" // link to the preprint - if no preprint is available, simply remove the whole property, so no empty download button will be rendered
 }
 ```
 > If there is no external link for a paper, it is also possible to upload documents to the web space. For this, simply add the document to the folder `public/documents/name-of-document.pdf` and change the download link to `/documents/name-of-document.pdf` and commit all files and changes.

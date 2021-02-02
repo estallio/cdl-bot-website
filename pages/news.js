@@ -29,6 +29,7 @@ const News = ({ newsData }) => {
             const info = entry[language + '-info'] || entry.info;
             const announcements =
               entry[language + '-announcements'] || entry.announcements;
+            const download = entry.download;
 
             return (
               <div className={styles.entry} key={i}>
@@ -36,8 +37,8 @@ const News = ({ newsData }) => {
                   <span>{entry.date}</span>
                 </div>
                 <div className={styles.info}>
-                  <h3>{title}</h3>
-                  <p>{info}</p>
+                  {title && <h3>{title}</h3>}
+                  {info && <p>{info}</p>}
                   {announcements && (
                     <ul>
                       {announcements.map((announcement, j) => (
@@ -45,10 +46,11 @@ const News = ({ newsData }) => {
                       ))}
                     </ul>
                   )}
-                  {entry.download && (
+                  {download && (
                     <a
                       alt={title + ' Download'}
                       target="_blank"
+                      href={download}
                       rel="noreferrer"
                       className={styles.download}
                     >
