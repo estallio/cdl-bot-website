@@ -1,43 +1,20 @@
 {
   "name": "cdl-bot-website",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+  "author": "Leonhard Esterbauer <leonhard.esterbauer@gmail.com>",
+  "engines": {
+    "node": "10.x"
   },
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.32",
-    "@fortawesome/free-brands-svg-icons": "^5.15.1",
-    "@fortawesome/free-solid-svg-icons": "^5.15.1",
-    "@fortawesome/react-fontawesome": "^0.1.13",
-    "classnames": "^2.2.6",
-    "include-media": "^1.4.9",
-    "lodash": "^4.17.20",
-    "moment": "^2.29.1",
-    "next": "^10.0.5",
-    "next-i18next": "^7.0.1",
-    "next-seo": "^4.17.0",
-    "next-translate": "^1.0.1",
-    "prop-types": "^15.7.2",
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
+  "scripts": {
+    "dev": "lerna run dev --parallel",
+    "build": "lerna run build",
+    "clean": "lerna clean",
+    "deploy": "lerna run deploy",
+    "empty-cache": "lerna run empty-cache"
   },
   "devDependencies": {
-    "eslint": "^7.15.0",
-    "eslint-config-prettier": "^7.0.0",
-    "eslint-plugin-prettier": "^3.2.0",
-    "eslint-plugin-react": "^7.21.5",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-optipng": "^8.0.0",
-    "imagemin-svgo": "^8.0.0",
-    "jimp": "^0.16.1",
-    "next-optimized-images": "^2.6.2",
-    "prettier": "^2.2.1",
-    "responsive-loader": "^2.2.1",
-    "sass": "^1.30.0",
-    "sharp": "^0.26.3"
+    "lerna": "^3.14.1",
+    "rimraf": "^2.6.3"
   }
 }

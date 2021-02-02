@@ -4,7 +4,9 @@ This repository contains a nextjs website template for [cdl-bot.at](https://cdl-
 
 ![Screenshot](img/Screenshot.png)
 
-## Add team member
+## The following description describes changes relative to or in the `web` folder!
+
+### Add team member
 1. Add a photo in the folder `public/images/team/` that approximately fits the aspect ratio 3:4 in portrait-mode (rest will be cut off) (be careful that the images are not too big in size, i.e. < 500 KB or even less).
 2. Add an entry to `public/content/team.json` like so:
 ```
@@ -24,7 +26,7 @@ git push
 ```
 4. Wait about 1-2min until Vercel redeployed the page.
 
-## Add news
+### Add news
 1. Add an entry to `public/content/news.json` like so:
 ```
 {
@@ -58,7 +60,7 @@ git push
 ```
 4. Wait about 1-2min until Vercel redeployed the page.
 
-## Add publications
+### Add publications
 1. Add an entry to `public/content/publications.json` like so:
 ```
 {
@@ -78,7 +80,7 @@ git push
 ```
 4. Wait about 1-2min until Vercel redeployed the page.
 
-## Remarks
+### Remarks
 * If you want to use special chars like '"', use escape chars in the JSON files like: '\"'
 * Use "‑" instead of "-" to prevent line-breaks (different ascii char)
 * This project uses nextjs with the next-i18next extension from [here](https://github.com/isaachinman/next-i18next)
@@ -88,7 +90,7 @@ git push
 * Until now an old solution is beeing used and for merging server-side data fetching and translating, a hacky solution from [here](https://github.com/isaachinman/next-i18next/issues/652#issuecomment-644618517) is used
 * Currently, the DNS requests to `http://cdl-bot.at` is resolved to a web space containing the `.htaccess` file from the miscellaneous folder that redirects to the subdomain `http://www.cdl-bot.at`.
 
-## TODO
+### TODO
 * [ ] If a second domain is used, a `canonical` tag must be specified to prevent search engines from blocking duplicate content
 * [x] It is better if the default domain redirects to the `www` subdomain
 * [ ] Add sameAs-links in the meta-component
