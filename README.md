@@ -80,7 +80,7 @@ git push
 
 ## Remarks
 * If you want to use special chars like '"', use escape chars in the JSON files like: '\"'
-* [x] Use "‑" instead of "-" to prevent line-breaks (different ascii char)
+* Use "‑" instead of "-" to prevent line-breaks (different ascii char)
 * This project uses nextjs with the next-i18next extension from [here](https://github.com/isaachinman/next-i18next)
 * Even there already exists nextjs v10 with i18n support, there is no automatic prefix-redirection so we stick to this solution
 * If the redirection from [here](https://github.com/vercel/next.js/discussions/18419) is implemented, we could change to this approach and make use of [this](https://github.com/vinissimus/next-translate) library (this approach brings also performance benefits)

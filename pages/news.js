@@ -40,7 +40,7 @@ const News = ({ newsData }) => {
                   {title && <h3>{title}</h3>}
                   {info && <p>{info}</p>}
                   {announcements && (
-                    <ul>
+                    <ul style={{ paddingBottom: 20 }}>
                       {announcements.map((announcement, j) => (
                         <li key={'announcement' + j}>{announcement}</li>
                       ))}
