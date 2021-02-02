@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useTranslation } from '../i18n';
 
-import { fetchNewsData } from '../miscellaneous/dataFetcher';
+import { fetchNews } from '../lib/api';
 
 import Meta from '../components/Meta';
 
@@ -72,7 +72,7 @@ News.defaultProps = {
 };
 
 export async function getServerSideProps() {
-  const newsData = fetchNewsData();
+  const newsData = await fetchNews();
 
   return {
     props: {

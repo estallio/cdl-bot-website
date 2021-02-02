@@ -8,7 +8,7 @@ export default {
   fields: [
     {
       title: 'Publications',
-      name: 'publications',
+      name: 'content',
       type: 'array',
       of: [
         defaultEditorSettings(),

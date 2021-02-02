@@ -10,9 +10,7 @@ export default {
       title: 'Picture',
       name: 'picture',
       type: 'image',
-      options: {
-        hotspot: true,
-      }
+      description: 'The face should be visible in a 3:4 portrait mode box in the center of the image. The image scales up to the available place on the page with it\'s smalles side - the rest is cut off and not visible.'
     },
     {
       title: 'Name',
@@ -25,16 +23,16 @@ export default {
       type: 'string',
     },
     {
-      title: 'Description English',
-      name: 'descriptionEn',
+      title: 'Info English',
+      name: 'infoEn',
       type: 'array',
       of: [
         defaultEditorSettings(true),
       ],
     },
     {
-      title: 'Description German',
-      name: 'descriptionDe',
+      title: 'Info German',
+      name: 'infoDe',
       type: 'array',
       of: [
         defaultEditorSettings(true),
