@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 import defaultEditorSettings from './defaultEditorSettings';
 
 export default {
@@ -47,6 +49,12 @@ export default {
   preview: {
     select: {
       title: 'date',
+    },
+    prepare(selection) {
+      const { date } = selection;
+      return {
+        title: moment(date).format('DD.MM.YYYY'),
+      }
     }
   }
 }

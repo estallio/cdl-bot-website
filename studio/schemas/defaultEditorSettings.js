@@ -31,8 +31,8 @@ export default (isTeam = false) => ({
             title: 'URL'
           },
           {
-            title: 'Open in same window',
-            name: 'blank',
+            title: 'Open link in same tab',
+            name: 'sameTab',
             type: 'boolean',
           }
         ]
