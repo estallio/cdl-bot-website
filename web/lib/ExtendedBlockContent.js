@@ -35,6 +35,11 @@ const serializers = {
         </a>
       );
     },
+    code: ({ node: { language, code } }) => (
+      <pre data-language={language}>
+        <code>{code}</code>
+      </pre>
+    ),
   },
 };
 
