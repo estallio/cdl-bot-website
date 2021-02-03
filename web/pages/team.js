@@ -37,7 +37,7 @@ const Team = ({ team }) => {
                 {pictureUrl && (
                   <a href={pictureUrl} target="_blank" rel="noreferrer">
                     <img
-                      src={pictureUrl + '?w=360&h=480&fit=crop&auto=format'}
+                      src={pictureUrl + '?w=432&h=576&fit=crop&auto=format'}
                     />
                   </a>
                 )}
