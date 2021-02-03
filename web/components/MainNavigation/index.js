@@ -43,21 +43,21 @@ const MainNavigation = () => {
           </a>
         </Link>
         <Link
-          href="/team"
-          defaultClass={styles.navItem}
-          activeClass={styles.active}
-        >
-          <a>
-            <span>Team</span>
-          </a>
-        </Link>
-        <Link
           href="/news"
           defaultClass={styles.navItem}
           activeClass={styles.active}
         >
           <a>
             <span>News</span>
+          </a>
+        </Link>
+        <Link
+          href="/team"
+          defaultClass={styles.navItem}
+          activeClass={styles.active}
+        >
+          <a>
+            <span>Team</span>
           </a>
         </Link>
         <Link
