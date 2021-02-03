@@ -1,29 +1,42 @@
 import S from '@sanity/desk-tool/structure-builder';
 
-function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
+const newsListItem = S.listItem()
+.title('News')
+.child(
+  S.documentTypeList('news')
+  .id('news')
+  .schemaType('news')
+  .defaultOrdering(
+    [{ field: 'date', direction: 'desc' }]
+  )
+);
 
-const pageItemsIds = [
-  'publications',
-];
+const teamListItem = S.listItem()
+.title('Team')
+.child(
+  S.documentTypeList('team')
+  .id('team')
+  .schemaType('team')
+  .defaultOrdering(
+    [{ field: 'order', direction: 'asc' }]
+  )
+);
 
-const pageItems = pageItemsIds.map(item => {
-  return S.listItem()
-  .title(capitalizeFirstLetter(item))
-  .child(
-    S.editor()
-    .title(capitalizeFirstLetter(item))
-    .id(item)
-    .schemaType(item)
-    .documentId(item)
-  );
-});
+const publicationsListItem = S.listItem()
+.title('Publications')
+.child(
+  S.editor()
+  .title('Publications')
+  .id('publications')
+  .schemaType('publications')
+  .documentId('publications')
+);
 
 export default () =>
   S.list()
   .title('Content')
   .items([
-    ...S.documentTypeListItems().filter(listItem => !pageItemsIds.includes(listItem.getId())),
-    ...pageItems,
+    newsListItem,
+    teamListItem,
+    publicationsListItem,
   ]);

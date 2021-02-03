@@ -28,3 +28,5 @@ yarn-error.log*
 lerna-debug.log
 
 .env.*
+
+sanity/dist

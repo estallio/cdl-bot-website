@@ -53,14 +53,14 @@ export default {
   },
   orderings: [
     {
-      title: 'sort order',
+      title: 'Order',
       name: 'sortOrder',
       by: [
         { field: 'order', direction: 'asc' }
       ]
     },
     {
-      title: 'name',
+      title: 'Name',
       name: 'nameOrder',
       by: [
         { field: 'name', direction: 'asc' }
