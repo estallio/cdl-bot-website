@@ -2,7 +2,7 @@ import { client } from './sanity';
 
 const fetchTeam = async () => {
   return await client.fetch(
-    `*[!(_id in path("drafts.**")) && _type == 'team'] { ..., 'pictureUrl': picture.asset->url } | order(order desc)`
+    `*[!(_id in path("drafts.**")) && _type == 'team'] { ..., 'pictureUrl': picture.asset->url } | order(order asc)`
   );
 };
 

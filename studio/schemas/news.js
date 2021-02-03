@@ -48,7 +48,7 @@ export default {
   ],
   preview: {
     select: {
-      title: 'date',
+      date: 'date',
     },
     prepare(selection) {
       const { date } = selection;
@@ -56,5 +56,21 @@ export default {
         title: moment(date).format('DD.MM.YYYY'),
       }
     }
-  }
+  },
+  orderings: [
+    {
+      title: 'Date descending',
+      name: 'dateDescending',
+      by: [
+        { field: 'date', direction: 'desc' }
+      ]
+    },
+    {
+      title: 'Date ascending',
+      name: 'dateAscending',
+      by: [
+        { field: 'date', direction: 'asc' }
+      ]
+    }
+  ]
 }

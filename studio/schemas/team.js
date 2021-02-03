@@ -50,5 +50,21 @@ export default {
       title: 'name',
       media: 'picture',
     }
-  }
+  },
+  orderings: [
+    {
+      title: 'sort order',
+      name: 'sortOrder',
+      by: [
+        { field: 'order', direction: 'asc' }
+      ]
+    },
+    {
+      title: 'name',
+      name: 'nameOrder',
+      by: [
+        { field: 'name', direction: 'asc' }
+      ]
+    }
+  ]
 }
