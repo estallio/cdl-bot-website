@@ -2,24 +2,27 @@ import { client } from './sanity';
 
 export { imageBuilder } from './sanity';
 
-export const filterDrafts = (entries) => {
-  return entries.filter((entry) => !entry._id.startsWith('drafts.'));
-};
-
 const fetchTeam = async () => {
-  const result = filterDrafts(await client.fetch(`*[_type == 'team']`));
-
-  return result;
+  return await client.fetch(
+    `*[!(_id in path("drafts.**")) && _type == 'team'] { ..., 'pictureUrl': picture.asset->url }`
+  );
 };
 
 const fetchNews = async () => {
-  const result = filterDrafts(await client.fetch(`*[_type == 'news']`));
-
-  return result;
+  return await client.fetch(`*[!(_id in path("drafts.**")) && _type == "news"] {
+    ...,
+    newsEntryEn[]{
+      ...,
+      "imageUrl": asset->url
+      // also 'asset->' is possible to join the asset and gets all information like url etc.
+    }
+  }`);
 };
 
 const fetchPublications = async () => {
-  const result = filterDrafts(await client.fetch(`*[_type == 'publications']`));
+  const result = await client.fetch(
+    `*[!(_id in path("drafts.**")) && _type == 'publications']`
+  );
 
   return result[0];
 };

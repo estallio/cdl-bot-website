@@ -28,7 +28,7 @@ const Team = ({ team }) => {
         <div className={styles.people}>
           {team.map((person, i) => {
             const name = person.name;
-            const picture = person.picture;
+            const pictureUrl = person.pictureUrl;
             const info = language === 'de' ? person.infoDe : person.infoEn;
             const email = person.email;
 
@@ -36,7 +36,9 @@ const Team = ({ team }) => {
 
             return (
               <div className={styles.person} key={i}>
-                {picture && <img src={imageBuilder.image(picture).url()} />}
+                {pictureUrl && (
+                  <img src={imageBuilder.image(pictureUrl).url()} />
+                )}
                 {name && <h3>{name}</h3>}
                 {email && <p className={styles.email}>{email}</p>}
                 {info && <ExtendedBlockContent blocks={info} />}

@@ -207,7 +207,7 @@
   width: 100%
   margin-bottom: 30px
   margin-top: 30px
-  h3
+  h2
     margin: 0
     position: relative
     font-size: $h3FontSize
@@ -231,7 +231,7 @@
     line-height: $defaultDesktopLineHeight
   &:nth-child(1)
     margin-top: 0
-    h3::after
+    h2::after
       display: none
   &:last-child
     .date::after
@@ -261,6 +261,12 @@
     width: 1px
     display: block
     border-left: 5px dashed $blue
+    //width: 5px
+    //display: block
+    //background-image: linear-gradient(to bottom, $blue 70%, rgba(255,255,255,0) 0%)
+    //background-position: top left
+    //background-size: 5px 15px
+    //background-repeat: repeat-y
     margin: 7px auto 5px
     @include media(">bigPhone")
       margin-top: 4px
@@ -324,6 +330,30 @@
       top: 21px
       left: -11px
 
+.blockContent
+  a
+    color: inherit
+    display: inline-block
+    text-decoration: underline
+    &.withBlueBox span, p
+      text-decoration: underline
+      color: $white
+      background-color: $darkBlue
+      padding: 1px 7px
+      display: block
+    &.withBigBox span, p
+      padding: 5px 10px
+  img
+    max-width: 100%
+    max-height: 400px
+    margin-top: 5px
+    margin-bottom: 5px
+    display: block
+  p:after
+    content: ''
+    display: inline-block
+    width: 0
+
 .download
   background-color: $darkBlue
   padding: 5px 8px
@@ -360,9 +390,3 @@
 
 .publication
   margin-bottom: 20px
-
-.paper
-  background-color: $darkBlue
-  padding: 1px 8px
-  color: $white
-  display: inline-block

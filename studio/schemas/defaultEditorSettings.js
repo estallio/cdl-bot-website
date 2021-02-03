@@ -31,6 +31,16 @@ export default (isTeam = false) => ({
             title: 'URL'
           },
           {
+            title: 'Show this link in a blue box',
+            name: 'withBlueBox',
+            type: 'boolean',
+          },
+          {
+            title: 'Show this link in a big box',
+            name: 'withBigBox',
+            type: 'boolean',
+          },
+          {
             title: 'Open link in same tab',
             name: 'sameTab',
             type: 'boolean',
