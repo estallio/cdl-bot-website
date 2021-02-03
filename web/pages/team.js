@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useTranslation } from '../i18n';
 
-import { fetchTeam, imageBuilder } from '../lib/api';
+import { fetchTeam } from '../lib/api';
 
 import ExtendedBlockContent from '../lib/ExtendedBlockContent';
 
@@ -32,12 +32,14 @@ const Team = ({ team }) => {
             const info = language === 'de' ? person.infoDe : person.infoEn;
             const email = person.email;
 
-            // image resizing so images have at most 500x300 or something like that
-
             return (
               <div className={styles.person} key={i}>
                 {pictureUrl && (
-                  <img src={imageBuilder.image(pictureUrl).url()} />
+                  <a href={pictureUrl} target="_blank" rel="noreferrer">
+                    <img
+                      src={pictureUrl + '?w=360&h=480&fit=crop&auto=format'}
+                    />
+                  </a>
                 )}
                 {name && <h3>{name}</h3>}
                 {email && <p className={styles.email}>{email}</p>}

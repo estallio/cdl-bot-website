@@ -31,7 +31,7 @@ const serializers = {
     image: ({ node: { imageUrl } }) => {
       return (
         <a href={imageUrl} target="_blank" rel="noreferrer">
-          <img src={imageUrl} />
+          <img src={imageUrl + '?w=1500&h=1000&fit=clip&auto=format'} />
         </a>
       );
     },
