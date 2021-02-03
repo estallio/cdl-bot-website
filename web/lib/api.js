@@ -4,7 +4,7 @@ export { imageBuilder } from './sanity';
 
 const fetchTeam = async () => {
   return await client.fetch(
-    `*[!(_id in path("drafts.**")) && _type == 'team'] { ..., 'pictureUrl': picture.asset->url }`
+    `*[!(_id in path("drafts.**")) && _type == 'team'] { ..., 'pictureUrl': picture.asset->url } | order(order desc)`
   );
 };
 
@@ -16,7 +16,7 @@ const fetchNews = async () => {
       "imageUrl": asset->url
       // also 'asset->' is possible to join the asset and gets all information like url etc.
     }
-  }`);
+  } | order(date desc)`);
 };
 
 const fetchPublications = async () => {
