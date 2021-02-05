@@ -3,7 +3,7 @@ import sanityImage from '@sanity/image-url';
 
 const options = {
   // Find your project ID and dataset in `sanity.json` in your studio project
-  dataset: 'production',
+  dataset: 'cdl-bot',
   projectId: 'ii4f9qqe',
   useCdn: process.env.NODE_ENV === 'production',
   // useCdn == true gives fast, cheap responses using a globally distributed cache.
