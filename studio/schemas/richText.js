@@ -44,9 +44,14 @@ export default (isTeam = false) => ({
             title: 'Open link in same tab',
             name: 'sameTab',
             type: 'boolean',
+          },
+          {
+            title: 'Open link in same tab',
+            name: 'file',
+            type: 'file',
           }
         ]
-      }
+      },
     ],
   }
 });
