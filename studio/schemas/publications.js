@@ -1,24 +1,13 @@
-import defaultEditorSettings from './defaultEditorSettings';
-
 export default {
   title: 'Publications',
   name: 'publications',
   type: 'document',
-  __experimental_actions: ['update', 'publish' /* 'create', 'delete' */],
+  __experimental_actions: ['update', 'publish'],
   fields: [
     {
       title: 'Publications',
       name: 'content',
-      type: 'array',
-      of: [
-        defaultEditorSettings(),
-        {
-          type: 'image'
-        },
-        {
-          type: 'code'
-        }
-      ],
+      type: 'richEditor'
     },
   ],
 }

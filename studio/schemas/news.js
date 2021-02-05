@@ -1,11 +1,12 @@
 import moment from 'moment';
-
-import defaultEditorSettings from './defaultEditorSettings';
+import { BiNews } from 'react-icons/bi';
+import { richEditorToPlainText } from './richEditor';
 
 export default {
   title: 'News',
   name: 'news',
   type: 'document',
+  icon: BiNews,
   __experimental_actions: ['update', 'publish', 'create', 'delete'],
   fields: [
     {
@@ -20,40 +21,24 @@ export default {
     {
       title: 'News entry English',
       name: 'newsEntryEn',
-      type: 'array',
-      of: [
-        defaultEditorSettings(),
-        {
-          type: 'image'
-        },
-        {
-          type: 'code'
-        }
-      ],
+      type: 'richEditor',
     },
     {
       title: 'News entry German',
       name: 'newsEntryDe',
-      type: 'array',
-      of: [
-        defaultEditorSettings(),
-        {
-          type: 'image'
-        },
-        {
-          type: 'code'
-        }
-      ],
+      type: 'richEditor',
     }
   ],
   preview: {
     select: {
       date: 'date',
+      newsEntryEn: 'newsEntryEn',
     },
     prepare(selection) {
-      const { date } = selection;
+      const { date, newsEntryEn } = selection;
       return {
         title: moment(date).format('DD.MM.YYYY'),
+        subtitle: richEditorToPlainText(newsEntryEn),
       }
     }
   },
