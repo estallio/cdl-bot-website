@@ -25,13 +25,13 @@ export default {
           type: 'string'
         },
         {
-          title: 'Welcome title German',
-          name: 'welcomeTitleDe',
+          title: 'Welcome title English',
+          name: 'welcomeTitleEn',
           type: 'string'
         },
         {
-          title: 'Welcome title English',
-          name: 'welcomeTitleEn',
+          title: 'Welcome title German',
+          name: 'welcomeTitleDe',
           type: 'string'
         },
         {
