@@ -11,7 +11,7 @@ const fetchHome = async () => {
           'imageUrl': welcomeImage.asset->url,
           'width': welcomeImage.asset->metadata.dimensions.width,
           'height': welcomeImage.asset->metadata.dimensions.height,
-          'altText': welcomeImage.asset->altText
+          'altText': welcomeImage.asset->altText,
           welcomeTextEn[]{
             ...,
             _type == 'downloadButton' => {
