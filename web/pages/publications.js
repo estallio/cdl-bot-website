@@ -12,7 +12,7 @@ import Layout from '../components/Layout';
 
 import styles from './index.module.sass';
 
-const Publications = ({ publications }) => {
+const Publications = ({ publications, seo, footer }) => {
   const {
     i18n: { language },
     t,
@@ -20,8 +20,8 @@ const Publications = ({ publications }) => {
 
   return (
     <>
-      <Meta title={t('title')} description={t('description')} />
-      <Layout>
+      <Meta seo={seo} />
+      <Layout footer={footer}>
         <h1>
           <span className={styles.pageHeading}>
             {language === 'de' ? 'Publikationen' : 'Publications'}
@@ -34,15 +34,17 @@ const Publications = ({ publications }) => {
 };
 
 Publications.defaultProps = {
-  i18nNamespaces: ['publications', 'miscellaneous', 'footer'],
+  i18nNamespaces: ['miscellaneous'],
 };
 
 export async function getServerSideProps() {
-  const publications = await fetchPublications();
+  const { publications, seo, footer } = await fetchPublications();
 
   return {
     props: {
       publications,
+      seo,
+      footer,
     },
   };
 }
