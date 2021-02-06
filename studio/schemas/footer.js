@@ -7,16 +7,38 @@ export default {
     {
       title: 'Contact',
       name: 'contact',
+      type: 'object',
+      fields: [
+        {
+          title: 'First line',
+          name: 'firstLine',
+          type: 'string'
+        },
+        {
+          title: 'Second line',
+          name: 'secondLine',
+          type: 'string'
+        },
+        {
+          title: 'Third line',
+          name: 'thirdLine',
+          type: 'string'
+        },
+        {
+          title: 'Fourth line',
+          name: 'fourthLine',
+          type: 'string'
+        }
+      ]
+    },
+    {
+      title: 'Imprint English',
+      name: 'imprintEn',
       type: 'text'
     },
     {
-      title: 'Impress English',
-      name: 'impressEn',
-      type: 'text'
-    },
-    {
-      title: 'Impress German',
-      name: 'impressDe',
+      title: 'Imprint German',
+      name: 'imprintDe',
       type: 'text'
     }
   ],

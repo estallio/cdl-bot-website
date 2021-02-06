@@ -2,20 +2,20 @@ import React from 'react';
 
 import styles from './FooterContact.module.sass';
 
-const FooterContact = () => (
+const FooterContact = ({ contact }) => (
   <div className={styles.footerContact}>
     <ul>
       <li>
-        <span>TU Wien: CDL-BOT</span>
+        <span>{contact.firstLine}</span>
       </li>
       <li>
-        <span>Argentinierstr. 8 / 194-02</span>
+        <span>{contact.secondLine}</span>
       </li>
       <li>
-        <span>A - 1040 Wien</span>
+        <span>{contact.thirdLine}</span>
       </li>
       <li>
-        <span>contact@cdl-bot.at</span>
+        <span>{contact.fourthLine}</span>
       </li>
     </ul>
   </div>

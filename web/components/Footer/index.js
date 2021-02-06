@@ -2,21 +2,21 @@ import React from 'react';
 
 import FooterLogo from '../FooterLogo';
 import FooterContact from '../FooterContact';
-import FooterImpress from '../FooterImprint';
+import FooterImprint from '../FooterImprint';
 
 import styles from './Footer.module.sass';
 
-const Footer = () => (
+const Footer = ({ contact, imprintDe, imprintEn }) => (
   <div className={styles.footer}>
     <div className={styles.inner}>
       <div className={styles.footerLogoWrapper}>
         <FooterLogo />
       </div>
       <div className={styles.footerContactWrapper}>
-        <FooterContact />
+        <FooterContact contact={contact} />
       </div>
       <div className={styles.footerImpressWrapper}>
-        <FooterImpress />
+        <FooterImprint imprintDe={imprintDe} imprintEn={imprintEn} />
       </div>
     </div>
   </div>
