@@ -12,21 +12,20 @@ import Layout from '../components/Layout';
 
 import styles from './index.module.sass';
 
-const Team = ({ team }) => {
+const Team = ({ team, footer, seo }) => {
   const {
     i18n: { language },
-    t,
-  } = useTranslation('team');
+  } = useTranslation();
 
   return (
     <>
-      <Meta title={t('title')} description={t('description')} />
-      <Layout>
+      <Meta seo={seo} />
+      <Layout footer={footer}>
         <h1>
           <span className={styles.pageHeading}>Team</span>
         </h1>
         <div className={styles.people}>
-          {team.map((person, i) => {
+          {team.persons.map((person, i) => {
             const name = person.name;
             const pictureUrl = person.pictureUrl;
             const info = language === 'de' ? person.infoDe : person.infoEn;
@@ -38,6 +37,10 @@ const Team = ({ team }) => {
                   <a href={pictureUrl} target="_blank" rel="noreferrer">
                     <img
                       src={pictureUrl + '?w=432&h=576&fit=crop&auto=format'}
+                      alt={
+                        name &&
+                        (language === 'de' ? 'Bild von ' : 'Picture of ') + name
+                      }
                     />
                   </a>
                 )}
@@ -54,15 +57,17 @@ const Team = ({ team }) => {
 };
 
 Team.defaultProps = {
-  i18nNamespaces: ['team', 'miscellaneous', 'footer'],
+  i18nNamespaces: ['miscellaneous'],
 };
 
 export async function getServerSideProps() {
-  const team = await fetchTeam();
+  const { footer, seo, team } = await fetchTeam();
 
   return {
     props: {
+      footer,
       team,
+      seo,
     },
   };
 }
