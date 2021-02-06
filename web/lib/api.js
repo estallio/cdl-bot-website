@@ -3,7 +3,7 @@ import { client } from './sanity';
 const fetchHome = async () => {
   return await client.fetch(
     `{
-      'footer': *[!(_id in path("drafts.**")) && _type == 'footer'][0]{ contact, impressDe, impressEn },
+      'footer': *[!(_id in path("drafts.**")) && _type == 'footer'][0]{ contact, imprintDe, imprintEn },
       'seo': *[!(_id in path("drafts.**")) && _type == 'seo'][0]{ seoHome },
       'home': *[!(_id in path("drafts.**")) && _type == 'home'][0]{
         welcome{
@@ -240,7 +240,7 @@ const fetchHome = async () => {
 const fetchTeam = async () => {
   return await client.fetch(
     `{
-      'footer': *[!(_id in path("drafts.**")) && _type == 'footer'][0]{ contact, impressDe, impressEn },
+      'footer': *[!(_id in path("drafts.**")) && _type == 'footer'][0]{ contact, imprintDe, imprintEn },
       'seo': *[!(_id in path("drafts.**")) && _type == 'seo'][0]{ seoTeam },
       'team': *[!(_id in path("drafts.**")) && _type == 'team'][0]{
         persons[]{
@@ -325,7 +325,7 @@ const fetchTeam = async () => {
 const fetchNews = async () => {
   return await client.fetch(
     `{
-      'footer': *[!(_id in path("drafts.**")) && _type == 'footer'][0]{ contact, impressDe, impressEn },
+      'footer': *[!(_id in path("drafts.**")) && _type == 'footer'][0]{ contact, imprintDe, imprintEn },
       'seo': *[!(_id in path("drafts.**")) && _type == 'seo'][0]{ seoNews },
       'news': *[!(_id in path("drafts.**")) && _type == 'news']{
         date,
@@ -407,7 +407,7 @@ const fetchNews = async () => {
 const fetchPublications = async () => {
   return await client.fetch(
     `{
-      'footer': *[!(_id in path("drafts.**")) && _type == 'footer'][0]{ contact, impressDe, impressEn },
+      'footer': *[!(_id in path("drafts.**")) && _type == 'footer'][0]{ contact, imprintDe, imprintEn },
       'seo': *[!(_id in path("drafts.**")) && _type == 'seo'][0]{ seoPublications },
       'publications': *[!(_id in path("drafts.**")) && _type == 'publications'][0]{
         content[]{
