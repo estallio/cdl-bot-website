@@ -8,7 +8,7 @@ import { useTranslation } from '../../i18n';
 
 import { NextSeo, SocialProfileJsonLd } from 'next-seo';
 
-const Meta = ({ title, description }) => {
+const Meta = ({ seo }) => {
   const {
     i18n: { language },
     t,
@@ -30,8 +30,10 @@ const Meta = ({ title, description }) => {
         }
       />
       <NextSeo
-        title={title}
-        description={description}
+        title={language === 'de' ? seo.seoTitleDe : seo.seoTitleEn}
+        description={
+          language === 'de' ? seo.seoDescriptionDe : seo.seoDescriptionEn
+        }
         languageAlternates={[
           {
             hrefLang: 'de',
@@ -51,9 +53,10 @@ const Meta = ({ title, description }) => {
           locale: language,
           url: 'https://www.cdl-bot.at/' + language + pathname,
           site_name: t('website-name'),
-          title: title,
+          title: language === 'de' ? seo.seoTitleDe : seo.seoTitleEn,
           titleTemplate: '%s | CDL-BOT',
-          description: description,
+          description:
+            language === 'de' ? seo.seoDescriptionDe : seo.seoDescriptionEn,
           images: [
             {
               url: 'https://www.cdl-bot.at/theme/images/open-graph-image.png',
