@@ -9,6 +9,8 @@ const fetchHome = async () => {
         welcome{
           ...,
           'imageUrl': welcomeImage.asset->url,
+          'width': welcomeImage.asset->metadata.dimensions.width,
+          'height': welcomeImage.asset->metadata.dimensions.height
           welcomeTextEn[]{
             ...,
             _type == 'downloadButton' => {
@@ -19,11 +21,15 @@ const fetchHome = async () => {
             },
             _type == 'gallery' => {
               images[]{
-                'imageUrl': asset->url
+                'imageUrl': asset->url,
+                'width': asset->metadata.dimensions.width,
+                'height': asset->metadata.dimensions.height
               }
             },
             _type == 'image' => {
-              'imageUrl': asset->url
+              'imageUrl': asset->url,
+              'width': asset->metadata.dimensions.width,
+              'height': asset->metadata.dimensions.height
             },
             _type == 'block' => {
               ...,
@@ -54,11 +60,15 @@ const fetchHome = async () => {
             },
             _type == 'gallery' => {
               images[]{
-                'imageUrl': asset->url
+                'imageUrl': asset->url,
+                'width': asset->metadata.dimensions.width,
+                'height': asset->metadata.dimensions.height
               }
             },
             _type == 'image' => {
-              'imageUrl': asset->url
+              'imageUrl': asset->url,
+              'width': asset->metadata.dimensions.width,
+              'height': asset->metadata.dimensions.height
             },
             _type == 'block' => {
               ...,
@@ -83,6 +93,8 @@ const fetchHome = async () => {
         research{
           ...,
           'imageUrl': researchImage.asset->url,
+          'width': researchImage.asset->metadata.dimensions.width,
+          'height': researchImage.asset->metadata.dimensions.height
           researchTextEn[]{
             ...,
             _type == 'downloadButton' => {
@@ -93,11 +105,15 @@ const fetchHome = async () => {
             },
             _type == 'gallery' => {
               images[]{
-                'imageUrl': asset->url
+                'imageUrl': asset->url,
+                'width': asset->metadata.dimensions.width,
+                'height': asset->metadata.dimensions.height
               }
             },
             _type == 'image' => {
-              'imageUrl': asset->url
+              'imageUrl': asset->url,
+              'width': asset->metadata.dimensions.width,
+              'height': asset->metadata.dimensions.height
             },
             _type == 'block' => {
               ...,
@@ -128,11 +144,15 @@ const fetchHome = async () => {
             },
             _type == 'gallery' => {
               images[]{
-                'imageUrl': asset->url
+                'imageUrl': asset->url,
+                'width': asset->metadata.dimensions.width,
+                'height': asset->metadata.dimensions.height
               }
             },
             _type == 'image' => {
-              'imageUrl': asset->url
+              'imageUrl': asset->url,
+              'width': asset->metadata.dimensions.width,
+              'height': asset->metadata.dimensions.height
             },
             _type == 'block' => {
               ...,
@@ -166,11 +186,15 @@ const fetchHome = async () => {
             },
             _type == 'gallery' => {
               images[]{
-                'imageUrl': asset->url
+                'imageUrl': asset->url,
+                'width': asset->metadata.dimensions.width,
+                'height': asset->metadata.dimensions.height
               }
             },
             _type == 'image' => {
-              'imageUrl': asset->url
+              'imageUrl': asset->url,
+              'width': asset->metadata.dimensions.width,
+              'height': asset->metadata.dimensions.height
             },
             _type == 'block' => {
               ...,
@@ -201,11 +225,15 @@ const fetchHome = async () => {
             },
             _type == 'gallery' => {
               images[]{
-                'imageUrl': asset->url
+                'imageUrl': asset->url,
+                'width': asset->metadata.dimensions.width,
+                'height': asset->metadata.dimensions.height
               }
             },
             _type == 'image' => {
-              'imageUrl': asset->url
+              'imageUrl': asset->url,
+              'width': asset->metadata.dimensions.width,
+              'height': asset->metadata.dimensions.height
             },
             _type == 'block' => {
               ...,
@@ -229,7 +257,9 @@ const fetchHome = async () => {
           supportersAndPartners[]{
             ...,
             'linkUrl': href,
-            'imageUrl': logo.asset->url
+            'imageUrl': logo.asset->url,
+            'width': logo.asset->metadata.dimensions.width,
+            'height': logo.asset->metadata.dimensions.height
           }
         }
       }
@@ -256,11 +286,15 @@ const fetchTeam = async () => {
             },
             _type == 'gallery' => {
               images[]{
-                'imageUrl': asset->url
+                'imageUrl': asset->url,
+                'width': asset->metadata.dimensions.width,
+                'height': asset->metadata.dimensions.height
               }
             },
             _type == 'image' => {
-              'imageUrl': asset->url
+              'imageUrl': asset->url,
+              'width': asset->metadata.dimensions.width,
+              'height': asset->metadata.dimensions.height
             },
             _type == 'block' => {
               ...,
@@ -291,11 +325,15 @@ const fetchTeam = async () => {
             },
             _type == 'gallery' => {
               images[]{
-                'imageUrl': asset->url
+                'imageUrl': asset->url,
+                'width': asset->metadata.dimensions.width,
+                'height': asset->metadata.dimensions.height
               }
             },
             _type == 'image' => {
-              'imageUrl': asset->url
+              'imageUrl': asset->url,
+              'width': asset->metadata.dimensions.width,
+              'height': asset->metadata.dimensions.height
             },
             _type == 'block' => {
               ...,
@@ -339,11 +377,15 @@ const fetchNews = async () => {
           },
           _type == 'gallery' => {
             images[]{
-              'imageUrl': asset->url
+              'imageUrl': asset->url,
+              'width': asset->metadata.dimensions.width,
+              'height': asset->metadata.dimensions.height
             }
           },
           _type == 'image' => {
-            'imageUrl': asset->url
+            'imageUrl': asset->url,
+            'width': asset->metadata.dimensions.width,
+            'height': asset->metadata.dimensions.height
           },
           _type == 'block' => {
             ...,
@@ -374,11 +416,15 @@ const fetchNews = async () => {
           },
           _type == 'gallery' => {
             images[]{
-              'imageUrl': asset->url
+              'imageUrl': asset->url,
+              'width': asset->metadata.dimensions.width,
+              'height': asset->metadata.dimensions.height
             }
           },
           _type == 'image' => {
-            'imageUrl': asset->url
+            'imageUrl': asset->url,
+            'width': asset->metadata.dimensions.width,
+            'height': asset->metadata.dimensions.height
           },
           _type == 'block' => {
             ...,
@@ -420,11 +466,15 @@ const fetchPublications = async () => {
           },
           _type == 'gallery' => {
             images[]{
-              'imageUrl': asset->url
+              'imageUrl': asset->url,
+              'width': asset->metadata.dimensions.width,
+              'height': asset->metadata.dimensions.height
             }
           },
           _type == 'image' => {
-            'imageUrl': asset->url
+            'imageUrl': asset->url,
+            'width': asset->metadata.dimensions.width,
+            'height': asset->metadata.dimensions.height
           },
           _type == 'block' => {
             ...,
