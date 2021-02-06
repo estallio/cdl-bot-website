@@ -8,27 +8,44 @@ import Meta from '../components/Meta';
 
 import Layout from '../components/Layout';
 
-import styles from './index.module.sass';
+import { fetchHome } from '../lib/api';
 
-const Home = () => {
-  const { t } = useTranslation('home');
+import styles from './index.module.sass';
+import ExtendedBlockContent from '../lib/ExtendedBlockContent';
+
+const Home = ({ home, seo, footer }) => {
+  const {
+    i18n: { language },
+  } = useTranslation('miscellaneous');
 
   return (
     <>
-      <Meta title={t('title')} description={t('description')} />
-      <Layout>
+      <Meta seo={seo} />
+      <Layout footer={footer}>
         <div className={styles.container}>
           <div
             className={classNames(styles.box, styles.textBox, styles.oneThird)}
           >
             <h1>
               <span className={styles.welcome}>
-                {t('welcome-heading-first-part')}
+                {language === 'de'
+                  ? home.welcome.welcomeTitleBlueBackgroundDe
+                  : home.welcome.welcomeTitleBlueBackgroundEn}
               </span>
               <br />
-              <span>{t('welcome-heading-second-part')}</span>
+              <span>
+                {language === 'de'
+                  ? home.welcome.welcomeTitleDe
+                  : home.welcome.welcomeTitleEn}
+              </span>
             </h1>
-            <p>{t('welcome-text')}</p>
+            <ExtendedBlockContent
+              blocks={
+                language === 'de'
+                  ? home.welcome.welcomeTextDe
+                  : home.welcome.welcomeTextEn
+              }
+            />
           </div>
           <div
             className={classNames(
@@ -38,7 +55,12 @@ const Home = () => {
               styles.imageOne
             )}
           >
-            <img src="/images/blockchain-communication.jpg" />
+            <img
+              src={
+                home.welcome.imageUrl + '?w=1500&h=1000&fit=clip&auto=format'
+              }
+              alt={home.welcome.altText}
+            />
           </div>
         </div>
         <div className={styles.container}>
@@ -50,7 +72,12 @@ const Home = () => {
               styles.imageBorderPaddingRight
             )}
           >
-            <img src="/images/internet-of-things.jpg" />
+            <img
+              src={
+                home.research.imageUrl + '?w=1500&h=1000&fit=clip&auto=format'
+              }
+              alt={home.research.altText}
+            />
           </div>
           <div
             className={classNames(
@@ -61,9 +88,19 @@ const Home = () => {
             )}
           >
             <h2 className={styles.researchFields}>
-              <span>{t('research-fields-heading')}</span>
+              <span>
+                {language === 'de'
+                  ? home.research.researchTitleDe
+                  : home.research.researchTitleEn}
+              </span>
             </h2>
-            <p>{t('research-fields-text')}</p>
+            <ExtendedBlockContent
+              blocks={
+                language === 'de'
+                  ? home.research.researchTextDe
+                  : home.research.researchTextEn
+              }
+            />
           </div>
         </div>
         <div className={classNames(styles.container)}>
@@ -71,111 +108,47 @@ const Home = () => {
             className={classNames(styles.box, styles.textBox, styles.oneHalf)}
           >
             <h2 className={styles.supportersAndPartners}>
-              <span>{t('supporters-heading')}</span>
+              <span>
+                {language === 'de'
+                  ? home.supportersAndPartners.supportersAndPartnersTitleDe
+                  : home.supportersAndPartners.supportersAndPartnersTitleEn}
+              </span>
             </h2>
-            <p>{t('supporters-text')}</p>
+            <ExtendedBlockContent
+              blocks={
+                language === 'de'
+                  ? home.supportersAndPartners.supportersAndPartnersTextDe
+                  : home.supportersAndPartners.supportersAndPartnersTextEn
+              }
+            />
           </div>
-          <div
-            className={classNames(
-              styles.box,
-              styles.supporterBox,
-              styles.oneHalf
-            )}
-          >
-            <a
-              href="https://www.cdg.ac.at/"
-              alt="Christian Doppler Forschungsgesellschaft Link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src="/images/supporters-and-partners/christian-doppler-forschungsgesellschaft.jpg"
-                alt="Christian Doppler Forschungsgesellschaft Logo"
-              />
-              <p>Christian Doppler Forschungsgesellschaft</p>
-            </a>
-          </div>
-          <div
-            className={classNames(
-              styles.box,
-              styles.supporterBox,
-              styles.oneHalf
-            )}
-          >
-            <a
-              href="https://pantos.io/"
-              alt="Pantos Link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src="/images/supporters-and-partners/pantos.jpg"
-                alt="Pantos Logo"
-              />
-              <p>Pantos</p>
-            </a>
-          </div>
-          <div
-            className={classNames(
-              styles.box,
-              styles.supporterBox,
-              styles.oneHalf
-            )}
-          >
-            <a
-              href="https://www.iota.org/"
-              alt="IOTA Foundation Link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src="/images/supporters-and-partners/iota-foundation.png"
-                alt="IOTA Foundation Logo"
-              />
-              <p>IOTA Foundation</p>
-            </a>
-          </div>
-          <div
-            className={classNames(
-              styles.box,
-              styles.supporterBox,
-              styles.oneHalf
-            )}
-          >
-            <a
-              href="https://www.bmdw.gv.at/"
-              alt="Bundesministerium Digitalisierung und Wirtschaftsstandort Link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src="/images/supporters-and-partners/bundesministerium-digitalisierung-und-wirtschaftsstandort.jpg"
-                alt="Bundesministerium Digitalisierung und Wirtschaftsstandort Logo"
-              />
-              <p>Bundesministerium Digitalisierung und Wirtschaftsstandort</p>
-            </a>
-          </div>
-          <div
-            className={classNames(
-              styles.box,
-              styles.supporterBox,
-              styles.oneHalf,
-              styles.informatics
-            )}
-          >
-            <a
-              href="https://informatics.tuwien.ac.at/"
-              alt="TU Wien Informatics Link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src="/images/supporters-and-partners/tu-wien-informatics.png"
-                alt="TU Wien Informatics Logo"
-              />
-              <p>TU Wien Informatics</p>
-            </a>
-          </div>
+          {home.supportersAndPartners.supportersAndPartners.map(
+            (supporterOrPartner, i) => (
+              <div
+                key={i}
+                className={classNames(
+                  styles.box,
+                  styles.supporterBox,
+                  styles.oneHalf
+                )}
+              >
+                <a
+                  href={supporterOrPartner.linkUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src={
+                      supporterOrPartner.imageUrl +
+                      '?w=1500&h=1000&fit=clip&auto=format'
+                    }
+                    alt={supporterOrPartner.altText}
+                  />
+                  <p>{supporterOrPartner.name}</p>
+                </a>
+              </div>
+            )
+          )}
         </div>
       </Layout>
     </>
@@ -183,7 +156,19 @@ const Home = () => {
 };
 
 Home.defaultProps = {
-  i18nNamespaces: ['home', 'miscellaneous', 'footer'],
+  i18nNamespaces: ['miscellaneous'],
 };
+
+export async function getServerSideProps() {
+  const { home, seo, footer } = await fetchHome();
+
+  return {
+    props: {
+      home,
+      seo,
+      footer,
+    },
+  };
+}
 
 export default Home;
