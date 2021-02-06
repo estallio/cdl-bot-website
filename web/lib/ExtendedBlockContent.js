@@ -24,7 +24,7 @@ const file = ({ mark, children }) => {
   const { fileUrl } = mark;
 
   return (
-    <a href={fileUrl + '?dl='} target="_blank" rel="noreferrer">
+    <a href={fileUrl} target="_blank" rel="noreferrer">
       <span>{children}</span>
     </a>
   );
@@ -54,7 +54,7 @@ const blueBoxFile = ({ mark, children }) => {
 
   return (
     <a
-      href={fileUrl + '?dl='}
+      href={fileUrl}
       target="_blank"
       rel="noreferrer"
       className={styles.withBlueBox}
@@ -168,7 +168,7 @@ const serializers = {
     downloadButton: ({ node: { fileUrl, title } }) => {
       return (
         <a
-          href={fileUrl + '?dl='}
+          href={fileUrl}
           target="_blank"
           rel="noreferrer"
           className={styles.bigBlueBox}
