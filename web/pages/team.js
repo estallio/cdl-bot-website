@@ -19,7 +19,7 @@ const Team = ({ team, footer, seo }) => {
 
   return (
     <>
-      <Meta seo={seo} />
+      <Meta seo={seo.seoTeam} />
       <Layout footer={footer}>
         <h1>
           <span className={styles.pageHeading}>Team</span>

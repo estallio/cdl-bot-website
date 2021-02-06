@@ -21,7 +21,7 @@ const News = ({ news, seo, footer }) => {
 
   return (
     <>
-      <Meta seo={seo} />
+      <Meta seo={seo.seoNews} />
       <Layout footer={footer}>
         <h1>
           <span className={styles.pageHeading}>News</span>

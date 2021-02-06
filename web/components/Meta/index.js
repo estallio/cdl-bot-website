@@ -1,7 +1,5 @@
 import React from 'react';
 
-import PropTypes from 'prop-types';
-
 import { useRouter } from 'next/router';
 
 import { useTranslation } from '../../i18n';
@@ -67,11 +65,6 @@ const Meta = ({ seo }) => {
       />
     </>
   );
-};
-
-Meta.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
 };
 
 export default Meta;

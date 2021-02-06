@@ -20,7 +20,7 @@ const Publications = ({ publications, seo, footer }) => {
 
   return (
     <>
-      <Meta seo={seo} />
+      <Meta seo={seo.seoPublications} />
       <Layout footer={footer}>
         <h1>
           <span className={styles.pageHeading}>

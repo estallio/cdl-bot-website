@@ -20,7 +20,7 @@ const Home = ({ home, seo, footer }) => {
 
   return (
     <>
-      <Meta seo={seo} />
+      <Meta seo={seo.seoHome} />
       <Layout footer={footer}>
         <div className={styles.container}>
           <div
