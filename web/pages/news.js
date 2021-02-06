@@ -14,16 +14,15 @@ import Layout from '../components/Layout';
 
 import styles from './index.module.sass';
 
-const News = ({ news }) => {
+const News = ({ news, seo, footer }) => {
   const {
     i18n: { language },
-    t,
-  } = useTranslation('news');
+  } = useTranslation('miscellaneous');
 
   return (
     <>
-      <Meta title={t('title')} description={t('description')} />
-      <Layout>
+      <Meta seo={seo} />
+      <Layout footer={footer}>
         <h1>
           <span className={styles.pageHeading}>News</span>
         </h1>
@@ -51,15 +50,17 @@ const News = ({ news }) => {
 };
 
 News.defaultProps = {
-  i18nNamespaces: ['news', 'miscellaneous', 'footer'],
+  i18nNamespaces: ['miscellaneous'],
 };
 
 export async function getServerSideProps() {
-  const news = await fetchNews();
+  const { news, seo, footer } = await fetchNews();
 
   return {
     props: {
       news,
+      seo,
+      footer,
     },
   };
 }
