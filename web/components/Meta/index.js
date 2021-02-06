@@ -41,6 +41,10 @@ const Meta = ({ title, description }) => {
             hrefLang: 'en',
             href: 'https://www.cdl-bot.at/en' + pathname,
           },
+          {
+            hrefLang: 'x-default',
+            href: 'https://www.cdl-bot.at/en' + pathname,
+          },
         ]}
         openGraph={{
           type: 'website',
