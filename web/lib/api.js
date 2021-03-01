@@ -274,7 +274,7 @@ const fetchHome = async () => {
             'imageUrl': logo.asset->url,
             'width': logo.asset->metadata.dimensions.width,
             'height': logo.asset->metadata.dimensions.height,
-            'altText': asset->altText
+            'altText': logo.asset->altText
           }
         }
       }
