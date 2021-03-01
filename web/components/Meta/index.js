@@ -28,7 +28,9 @@ const Meta = ({ seo }) => {
         }
       />
       <NextSeo
-        title={language === 'de' ? seo.seoTitleDe : seo.seoTitleEn}
+        title={
+          (language === 'de' ? seo.seoTitleDe : seo.seoTitleEn) + ' | CLD-BOT'
+        }
         description={
           language === 'de' ? seo.seoDescriptionDe : seo.seoDescriptionEn
         }
