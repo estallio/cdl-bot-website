@@ -2,7 +2,6 @@ import S from '@sanity/desk-tool/structure-builder';
 import { BsNewspaper, BsSearch } from 'react-icons/bs';
 import { AiOutlineTeam, AiOutlineHome } from 'react-icons/ai';
 import { RiFilePaper2Line, RiLayoutBottom2Line } from 'react-icons/ri';
-import home from './schemas/home';
 
 const newsListItem = S.listItem()
 .title('News')

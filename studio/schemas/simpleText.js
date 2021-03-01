@@ -14,11 +14,12 @@ export default () => ({
   styles: [
     { title: 'Normal', value: 'normal' },
   ],
+  // lists: [],
   marks: {
     decorators: [
       { title: 'Strong', value: 'strong' },
       { title: 'Underline', value: 'underline' },
-      { title: "Strike", value: "strike-through" },
+      { title: 'Strike', value: 'strike-through' },
       { title: 'Emphasis', value: 'em' },
       { title: 'Code', value: 'code' },
     ],
