@@ -53,8 +53,9 @@ const Meta = ({ seo }) => {
           locale: language,
           url: 'https://www.cdl-bot.at/' + language + pathname,
           site_name: t('website-name'),
-          title: language === 'de' ? seo.seoTitleDe : seo.seoTitleEn,
-          titleTemplate: '%s | CDL-BOT',
+          title:
+            (language === 'de' ? seo.seoTitleDe : seo.seoTitleEn) +
+            ' | CLD-BOT',
           description:
             language === 'de' ? seo.seoDescriptionDe : seo.seoDescriptionEn,
           images: [
