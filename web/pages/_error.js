@@ -17,9 +17,17 @@ const ErrorPage = ({ statusCode }) => {
 
   const code = statusCode || 500;
 
+  let title = '';
+
+  if (code === 404) {
+    title = t('error-title-404');
+  } else if (code === 500) {
+    title = t('error-title-500');
+  }
+
   return (
     <div className={styles.error}>
-      <Error statusCode={code} />
+      <Error statusCode={code} title={title} />
       <Link href="/">
         <a
           style={{

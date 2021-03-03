@@ -1,5 +1,7 @@
 {
   "website-name": "CDL-BOT | Blockchain for the Internet of Things",
+  "error-title-404": "This page could not be found.",
+  "error-title-500": "Internal server error.",
   "back-to-homepage": "Back to the homepage",
   "menu-text": "Menu",
   "imprint-heading": "Imprint"

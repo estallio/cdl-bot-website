@@ -1,5 +1,7 @@
 {
   "website-name": "CDL-BOT | Christian Doppler Labor - Blockchain für das Internet der Dinge",
+  "error-title-404": "Diese Seite konnte nicht gefunden werden.",
+  "error-title-500": "Es ist ein interner Fehler aufgetreten.",
   "back-to-homepage": "Zurück zur Startseite",
   "menu-text": "Menü",
   "imprint-heading": "Impressum"
