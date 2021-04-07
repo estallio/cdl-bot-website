@@ -2,14 +2,14 @@ Most of the code parts fall under the MIT License.
 However, all assets like images, fonts and other files
 and names like "cdl-bot" or texts on the website are licensed and copyright is hold by
 the CDL BOT laboratory and Leonhard Esterbauer if not explicitly told otherwise.
-The use of the name "cld-bot", "Pantos", "IOTA Foundation", "TU Wien Informatics", "Christian Doppler Forschungsgesellschaft" and other organizational terms, texts on the website, images,
+The use of the name "CDL-BOT", "Pantos", "IOTA Foundation", "TU Wien Informatics", "Christian Doppler Forschungsgesellschaft" and other organizational terms, texts on the website, images,
 logos, icons and personal information contained in this repository is strictly prohibited.
 
 For code parts, the MIT License holds:
 
 The MIT License (MIT)
 
-Copyright (c) 2020 CLD-BOT laboratory respectively Leonhard Esterbauer
+Copyright (c) 2020 CDL-BOT laboratory respectively Leonhard Esterbauer
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

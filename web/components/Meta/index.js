@@ -29,7 +29,7 @@ const Meta = ({ seo }) => {
       />
       <NextSeo
         title={
-          (language === 'de' ? seo.seoTitleDe : seo.seoTitleEn) + ' | CLD-BOT'
+          (language === 'de' ? seo.seoTitleDe : seo.seoTitleEn) + ' | CDL-BOT'
         }
         description={
           language === 'de' ? seo.seoDescriptionDe : seo.seoDescriptionEn
@@ -55,7 +55,7 @@ const Meta = ({ seo }) => {
           site_name: t('website-name'),
           title:
             (language === 'de' ? seo.seoTitleDe : seo.seoTitleEn) +
-            ' | CLD-BOT',
+            ' | CDL-BOT',
           description:
             language === 'de' ? seo.seoDescriptionDe : seo.seoDescriptionEn,
           images: [
