@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.w3.org/1999/xhtml http://www.w3.org/2002/08/xhtml/xhtml1-strict.xsd">
   <url>
     <loc>https://www.cdl-bot.at/en</loc>
     <xhtml:link
       rel="alternate"
       hreflang="de"
-      href="http://www.cdl-bot.at/de" />
+      href="http://www.cdl-bot.at/de"/>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://www.cdl-bot.at/en" />
+      href="http://www.cdl-bot.at/en"/>
     <xhtml:link
       rel="alternate"
       hreflang="x-default"
-      href="http://www.cdl-bot.at/en" />
+      href="http://www.cdl-bot.at/en"/>
     <priority>1.00</priority>
   </url>
   <url>
@@ -24,15 +24,15 @@
     <xhtml:link
       rel="alternate"
       hreflang="de"
-      href="http://www.cdl-bot.at/de/news" />
+      href="http://www.cdl-bot.at/de/news"/>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://www.cdl-bot.at/en/news" />
+      href="http://www.cdl-bot.at/en/news"/>
     <xhtml:link
       rel="alternate"
       hreflang="x-default"
-      href="http://www.cdl-bot.at/en/news" />
+      href="http://www.cdl-bot.at/en/news"/>
     <priority>0.80</priority>
   </url>
   <url>
@@ -40,15 +40,15 @@
     <xhtml:link
       rel="alternate"
       hreflang="de"
-      href="http://www.cdl-bot.at/de/team" />
+      href="http://www.cdl-bot.at/de/team"/>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://www.cdl-bot.at/en/team" />
+      href="http://www.cdl-bot.at/en/team"/>
     <xhtml:link
       rel="alternate"
       hreflang="x-default"
-      href="http://www.cdl-bot.at/en/team" />
+      href="http://www.cdl-bot.at/en/team"/>
     <priority>0.80</priority>
   </url>
   <url>
@@ -56,15 +56,15 @@
     <xhtml:link
       rel="alternate"
       hreflang="de"
-      href="http://www.cdl-bot.at/de/publications" />
+      href="http://www.cdl-bot.at/de/publications"/>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://www.cdl-bot.at/en/publications" />
+      href="http://www.cdl-bot.at/en/publications"/>
     <xhtml:link
       rel="alternate"
       hreflang="x-default"
-      href="http://www.cdl-bot.at/en/publications" />
+      href="http://www.cdl-bot.at/en/publications"/>
     <priority>0.80</priority>
   </url>
 </urlset>
