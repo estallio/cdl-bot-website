@@ -12,7 +12,9 @@ const MainNavigation = () => {
   const {
     i18n: { language, changeLanguage },
   } = useTranslation();
-  const { pathname } = useRouter();
+  const { pathname: untrimmedPathname } = useRouter();
+
+  const pathname = untrimmedPathname.replace(/\/$/, '');
 
   useEffect(() => {
     const menuBtn = document.getElementsByClassName(styles.menuToggle)[0];
@@ -71,8 +73,9 @@ const MainNavigation = () => {
         </Link>
         <div className={styles.languageSwitcher}>
           {language !== 'en' ? (
-            <Link href={pathname} key="en">
+            <Link href={'/en' + pathname} key="en">
               <a
+                title="English"
                 onClick={() => {
                   changeLanguage('en');
                 }}
@@ -84,8 +87,9 @@ const MainNavigation = () => {
             <span>English</span>
           )}
           {language !== 'de' ? (
-            <Link href={pathname} key="de">
+            <Link href={'/de' + pathname} key="de">
               <a
+                title="Deutsch"
                 onClick={() => {
                   changeLanguage('de');
                 }}
