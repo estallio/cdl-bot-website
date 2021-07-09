@@ -73,7 +73,7 @@ const MainNavigation = () => {
         </Link>
         <div className={styles.languageSwitcher}>
           {language !== 'en' ? (
-            <Link href={'/en' + pathname} key="en">
+            <Link href={'/en' + pathname} unlocalized>
               <a
                 title="English"
                 onClick={() => {
@@ -87,7 +87,7 @@ const MainNavigation = () => {
             <span>English</span>
           )}
           {language !== 'de' ? (
-            <Link href={'/de' + pathname} key="de">
+            <Link href={'/de' + pathname} unlocalized>
               <a
                 title="Deutsch"
                 onClick={() => {
