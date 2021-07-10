@@ -6,4 +6,7 @@ module.exports = new NextI18Next({
   otherLanguages: ['de'],
   localeSubpaths,
   localePath: path.resolve('./public/locales'),
+  detection: {
+    cookieSameSite: 'lax',
+  },
 });
