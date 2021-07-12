@@ -16,7 +16,7 @@
     <xhtml:link
       rel="alternate"
       hreflang="x-default"
-      href="http://www.cdl-bot.at/en"/>
+      href="http://www.cdl-bot.at"/>
     <priority>1.00</priority>
   </url>
   <url>
@@ -32,7 +32,7 @@
     <xhtml:link
       rel="alternate"
       hreflang="x-default"
-      href="http://www.cdl-bot.at/en/news"/>
+      href="http://www.cdl-bot.at/news"/>
     <priority>0.80</priority>
   </url>
   <url>
@@ -48,7 +48,7 @@
     <xhtml:link
       rel="alternate"
       hreflang="x-default"
-      href="http://www.cdl-bot.at/en/team"/>
+      href="http://www.cdl-bot.at/team"/>
     <priority>0.80</priority>
   </url>
   <url>
@@ -64,7 +64,7 @@
     <xhtml:link
       rel="alternate"
       hreflang="x-default"
-      href="http://www.cdl-bot.at/en/publications"/>
+      href="http://www.cdl-bot.at/publications"/>
     <priority>0.80</priority>
   </url>
 </urlset>
