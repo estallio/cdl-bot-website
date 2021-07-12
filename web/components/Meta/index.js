@@ -45,7 +45,7 @@ const Meta = ({ seo }) => {
           },
           {
             hrefLang: 'x-default',
-            href: 'https://www.cdl-bot.at/en' + pathname,
+            href: 'https://www.cdl-bot.at' + pathname,
           },
         ]}
         openGraph={{
