@@ -5,7 +5,7 @@
   &.open .menuToggle
     border-color: transparent
     &:after
-      top: 30px
+      top: 60px
       right: 40px
       content: '×'
       font-size: 100px
@@ -19,12 +19,13 @@
   background-color: $blue
   padding: 12px 20px 10px 20px
   top: 0
-  left: 50%
-  margin-left: -95px
+  width: 100%
   color: $white
+  text-align: center
   span:nth-child(2), a:nth-child(2)
     margin-left: 30px
   @include media(">1024px")
+    width: inherit
     position: absolute
     background-color: $blue
     padding: 8px 15px 1px 16px
@@ -107,7 +108,7 @@
   text-decoration: none
   display: block
   text-align: center
-  margin-top: 100px
+  margin-top: 60px
   color: $defaultFontColor
   font-size: $defaultFontSize * 1.75
   line-height: $defaultLineHeight * 1.75
