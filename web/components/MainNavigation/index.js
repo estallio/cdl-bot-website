@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import { useRouter } from 'next/router';
 
@@ -13,17 +13,16 @@ const MainNavigation = () => {
     i18n: { language, changeLanguage },
   } = useTranslation();
   const { pathname: untrimmedPathname } = useRouter();
+  const nav = useRef(null);
+  const menuBtn = useRef(null);
 
   const pathname = untrimmedPathname.replace(/\/$/, '');
 
   useEffect(() => {
-    const menuBtn = document.getElementsByClassName(styles.menuToggle)[0];
-    const nav = document.getElementsByClassName(styles.mainNavigation)[0];
-
-    menuBtn.addEventListener(
+    menuBtn.current.addEventListener(
       'click',
       () => {
-        nav.classList.toggle(styles.open);
+        nav.current.classList.toggle(styles.open);
       },
       false
     );
@@ -32,8 +31,8 @@ const MainNavigation = () => {
   }, []);
 
   return (
-    <div className={styles.mainNavigation}>
-      <div className={styles.menuToggle}></div>
+    <div ref={nav} className={styles.mainNavigation}>
+      <div ref={menuBtn} className={styles.menuToggle}></div>
       <nav className={styles.nav}>
         <Link
           href="/"
@@ -78,6 +77,7 @@ const MainNavigation = () => {
                 title="English"
                 onClick={() => {
                   changeLanguage('en');
+                  nav.current.classList.remove(styles.open);
                 }}
               >
                 English
@@ -92,6 +92,7 @@ const MainNavigation = () => {
                 title="Deutsch"
                 onClick={() => {
                   changeLanguage('de');
+                  nav.current.classList.remove(styles.open);
                 }}
               >
                 Deutsch
