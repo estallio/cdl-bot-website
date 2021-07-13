@@ -78,6 +78,7 @@ const MainNavigation = () => {
                 onClick={() => {
                   changeLanguage('en');
                   nav.current.classList.remove(styles.open);
+                  document.documentElement.setAttribute('lang', 'en');
                 }}
               >
                 English
@@ -93,6 +94,7 @@ const MainNavigation = () => {
                 onClick={() => {
                   changeLanguage('de');
                   nav.current.classList.remove(styles.open);
+                  document.documentElement.setAttribute('lang', 'de');
                 }}
               >
                 Deutsch
