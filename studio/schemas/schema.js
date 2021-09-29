@@ -13,6 +13,7 @@ import footer from './footer';
 import seo from './seo';
 import downloadButton from './downloadButton';
 import linkButton from './linkButton';
+import imprint from './imprint'
 
 export default createSchema({
   name: 'default',
@@ -28,6 +29,7 @@ export default createSchema({
     footer,
     seo,
     downloadButton,
-    linkButton
+    linkButton,
+    imprint
   ])
 });

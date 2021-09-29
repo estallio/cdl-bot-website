@@ -3,6 +3,7 @@ import React from 'react';
 import { useTranslation } from '../../i18n';
 
 import styles from './FooterImprint.module.sass';
+import Link from '../Link';
 
 const FooterImprint = ({ imprintDe, imprintEn }) => {
   const {
@@ -12,16 +13,15 @@ const FooterImprint = ({ imprintDe, imprintEn }) => {
 
   return (
     <div className={styles.footerImprint}>
-      <ul>
-        <li>
+      <Link
+        href="/imprint"
+        defaultClass={styles.navItem}
+        activeClass={styles.active}
+      >
+        <a>
           <span>{t('imprint-heading')}</span>
-        </li>
-        <li>
-          <p className={styles.imprint}>
-            {language === 'de' ? imprintDe : imprintEn}
-          </p>
-        </li>
-      </ul>
+        </a>
+      </Link>
     </div>
   );
 };

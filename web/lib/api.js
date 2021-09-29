@@ -525,4 +525,96 @@ const fetchPublications = async () => {
   );
 };
 
-export { fetchTeam, fetchNews, fetchPublications, fetchHome };
+const fetchImprint = async () => {
+  return await client.fetch(
+    `{
+      'footer': *[!(_id in path("drafts.**")) && _type == 'footer'][0]{ contact, imprintDe, imprintEn },
+      'imprint': *[!(_id in path("drafts.**")) && _type == 'imprint'][0]{
+        imprintContentEn[]{
+          ...,
+          _type == 'downloadButton' => {
+            'fileUrl': file.asset->url
+          },
+          _type == 'linkButton' => {
+            'linkUrl': href
+          },
+          _type == 'gallery' => {
+            images[]{
+              'imageUrl': asset->url,
+              'width': asset->metadata.dimensions.width,
+              'height': asset->metadata.dimensions.height,
+              'altText': asset->altText
+            }
+          },
+          _type == 'image' => {
+            'imageUrl': asset->url,
+            'width': asset->metadata.dimensions.width,
+            'height': asset->metadata.dimensions.height,
+            'altText': asset->altText
+          },
+          _type == 'block' => {
+            ...,
+            markDefs[] {
+              ...,
+              _type == 'link' => {
+                'linkUrl': href
+              },
+              _type == 'file' => {
+                'fileUrl': asset->url
+              },
+              _type == 'blueBoxLink' => {
+                'linkUrl': href
+              },
+              _type == 'blueBoxFile' => {
+                'fileUrl': asset->url
+              }
+            }
+          }
+        },
+        imprintContentGe[]{
+          ...,
+          _type == 'downloadButton' => {
+            'fileUrl': file.asset->url
+          },
+          _type == 'linkButton' => {
+            'linkUrl': href
+          },
+          _type == 'gallery' => {
+            images[]{
+              'imageUrl': asset->url,
+              'width': asset->metadata.dimensions.width,
+              'height': asset->metadata.dimensions.height,
+              'altText': asset->altText
+            }
+          },
+          _type == 'image' => {
+            'imageUrl': asset->url,
+            'width': asset->metadata.dimensions.width,
+            'height': asset->metadata.dimensions.height,
+            'altText': asset->altText
+          },
+          _type == 'block' => {
+            ...,
+            markDefs[] {
+              ...,
+              _type == 'link' => {
+                'linkUrl': href
+              },
+              _type == 'file' => {
+                'fileUrl': asset->url
+              },
+              _type == 'blueBoxLink' => {
+                'linkUrl': href
+              },
+              _type == 'blueBoxFile' => {
+                'fileUrl': asset->url
+              }
+            }
+          }
+        }
+      }
+    }`
+  );
+};
+
+export { fetchTeam, fetchNews, fetchPublications, fetchHome, fetchImprint };

@@ -26,6 +26,17 @@ const teamListItem = S.listItem()
   .documentId('team')
 );
 
+const imprintListItem = S.listItem()
+  .title('Imprint')
+  .icon(RiFilePaper2Line)
+  .child(
+    S.editor()
+      .title('Imprint')
+      .id('imprint')
+      .schemaType('imprint')
+      .documentId('imprint')
+  );
+
 const publicationsListItem = S.listItem()
 .title('Publications')
 .icon(RiFilePaper2Line)
@@ -80,4 +91,5 @@ export default () =>
     publicationsListItem,
     footerListItem,
     seoListItem,
+    imprintListItem
   ]);

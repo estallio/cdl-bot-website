@@ -12,9 +12,9 @@ const Footer = ({ contact, imprintDe, imprintEn }) => (
       <div className={styles.footerLogoWrapper}>
         <FooterLogo />
       </div>
-      <div className={styles.footerContactWrapper}>
+      {/*      <div className={styles.footerContactWrapper}>
         <FooterContact contact={contact} />
-      </div>
+      </div>*/}
       <div className={styles.footerImpressWrapper}>
         <FooterImprint imprintDe={imprintDe} imprintEn={imprintEn} />
       </div>
