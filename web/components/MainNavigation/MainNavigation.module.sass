@@ -4,12 +4,14 @@
 .mainNavigation
   &.open .menuToggle
     border-color: transparent
+
     &:after
       top: 60px
       right: 40px
       content: '×'
       font-size: 100px
       position: fixed
+
   &.open .nav
     visibility: visible
     opacity: 1
@@ -22,8 +24,10 @@
   width: 100%
   color: $white
   text-align: center
+
   span:nth-child(2), a:nth-child(2)
     margin-left: 30px
+
   @include media(">1024px")
     width: inherit
     position: absolute
@@ -33,9 +37,11 @@
     top: -50px
     left: revert
     margin-left: inherit
+
   a
     color: $inactive
     text-decoration: none
+
     &:hover
       color: $white
 
@@ -74,6 +80,7 @@
   z-index: 100
   @include media(">1024px")
     display: none
+
   &:after
     margin-top: -2px
     content: 'Menu'
@@ -96,10 +103,13 @@
   &.lightColors
     & .menuToggle
       border-color: $white
+
     & .menuToggle:after
       color: $white
+
     &.open .menuToggle:after
       color: $defaultFontColor
+
     & .navItem
       @include media(">1024px")
         color: $white
@@ -113,8 +123,10 @@
   font-size: $defaultFontSize * 1.75
   line-height: $defaultLineHeight * 1.75
   letter-spacing: $defaultLetterSpacing * 1.75
+
   &.active span, &:hover span
     border-bottom: 3px solid $blue
+
   @include media(">1024px")
     float: left
     margin: 8px 0 0 73px

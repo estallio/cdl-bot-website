@@ -10,7 +10,7 @@ import Layout from '../components/Layout';
 
 import styles from './index.module.sass';
 
-const Imprint = ({ imprint, footer }) => {
+const Imprint = ({ imprint }) => {
   const {
     i18n: { language },
     t,
@@ -18,7 +18,7 @@ const Imprint = ({ imprint, footer }) => {
 
   return (
     <>
-      <Layout footer={footer}>
+      <Layout>
         <h1>
           <span className={styles.pageHeading}>
             {language === 'de' ? 'Impressum' : 'Imprint'}
@@ -27,8 +27,8 @@ const Imprint = ({ imprint, footer }) => {
         <ExtendedBlockContent
           blocks={
             language === 'de'
-              ? imprint.imprintContentEn
-              : imprint.imprintContentGe || []
+              ? imprint.imprintContentGe
+              : imprint.imprintContentEn || []
           }
         />
       </Layout>
@@ -41,11 +41,10 @@ Imprint.defaultProps = {
 };
 
 export async function getServerSideProps() {
-  const { imprint, footer } = await fetchImprint();
+  const { imprint } = await fetchImprint();
   return {
     props: {
       imprint,
-      footer,
     },
   };
 }

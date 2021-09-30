@@ -13,7 +13,7 @@ import { fetchHome } from '../lib/api';
 import styles from './index.module.sass';
 import ExtendedBlockContent from '../lib/ExtendedBlockContent';
 
-const Home = ({ home, seo, footer }) => {
+const Home = ({ home, seo }) => {
   const {
     i18n: { language },
   } = useTranslation('miscellaneous');
@@ -21,7 +21,7 @@ const Home = ({ home, seo, footer }) => {
   return (
     <>
       <Meta seo={seo.seoHome} />
-      <Layout footer={footer}>
+      <Layout>
         <div className={styles.container}>
           <div
             className={classNames(styles.box, styles.textBox, styles.oneThird)}
@@ -160,13 +160,12 @@ Home.defaultProps = {
 };
 
 export async function getServerSideProps() {
-  const { home, seo, footer } = await fetchHome();
+  const { home, seo } = await fetchHome();
 
   return {
     props: {
       home,
       seo,
-      footer,
     },
   };
 }

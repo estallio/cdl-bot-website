@@ -7,6 +7,7 @@
     margin-top: 2px !important
     @include media(">768px")
       margin-top: 10px !important
+
   a
     color: $darkBlue
 
@@ -14,13 +15,16 @@
   display: flex
   flex-wrap: wrap
   justify-content: space-between
+
   h1
     margin-bottom: 0
+
   h2
     margin-bottom: 0
 
 .researchFields
   position: relative
+
   &::after
     content: ''
     position: absolute
@@ -32,6 +36,7 @@
 
 .supportersAndPartners
   position: relative
+
   &::after
     content: ''
     position: absolute
@@ -55,6 +60,7 @@
     line-height: 40px
     padding-right: 6px
     padding-bottom: 2px
+
   &::after
     content: ''
     position: absolute
@@ -73,6 +79,7 @@
   justify-content: center
   display: flex
   flex-direction: column
+
   & img
     width: 80%
     margin: 0 auto
@@ -82,6 +89,7 @@
 
 .imageOne
   margin-bottom: 0
+
   img
     @include media(">tablet")
       margin-left: 50px
@@ -96,6 +104,7 @@
   justify-content: center
   align-items: center
   width: 40%
+
   p
     width: 100%
     font-size: 13px
@@ -107,6 +116,7 @@
     @include media(">bigPhone")
       font-size: inherit
       line-height: inherit
+
   @include media(">tablet")
     img
       max-width: 300px
@@ -117,6 +127,7 @@
   justify-content: center
   align-items: center
   display: flex
+
   img
     max-width: 200px
     max-height: 200px
@@ -147,13 +158,17 @@
   display: flex
   flex-wrap: wrap
   justify-content: space-between
+
   h1
     margin-bottom: 0
+
   h2
     margin-bottom: 0
+
   h3
     margin-bottom: 20px
     position: relative
+
     &::after
       content: ''
       position: absolute
@@ -162,13 +177,16 @@
       background-color: $blue
       display: block
       z-index: -1
+
   .email
     font-size: $defaultDesktopFontSize / 1.25
     margin-top: -11px
     position: relative
     margin-bottom: 16px
+
   p
     margin: 0
+
   &::after
     width: 100%
     margin-bottom: 50px
@@ -183,6 +201,7 @@
 .person
   // border: 3px solid $blue
   padding: 0 15px 15px
+
   img
     margin: 0 auto
     display: block
@@ -207,6 +226,7 @@
   width: 100%
   margin-bottom: 30px
   margin-top: 30px
+
   h2
     margin: 0
     position: relative
@@ -229,18 +249,23 @@
   @include media(">bigPhone")
     font-size: $defaultDesktopFontSize
     line-height: $defaultDesktopLineHeight
+
   &:nth-child(1)
     margin-top: 0
+
     h2::after
       display: none
+
   &:last-child
     .date::after
       height: calc(100% - 25px)
+
   p
     margin-top: 5px
     margin-bottom: 5px
     z-index: 10
     position: relative
+
   ul
     padding-inline-start: 15px
     margin-bottom: 0
@@ -254,6 +279,7 @@
   font-size: 13px
   @include media(">bigPhone")
     padding-top: 17px
+
   &::after
     content: ''
     height: 100%
@@ -271,6 +297,7 @@
     @include media(">bigPhone")
       margin-top: 4px
       padding-bottom: 4px
+
   @include media(">400px")
     width: 20%
   @include media(">600px")
@@ -311,6 +338,7 @@
   @include media(">1200px")
     width: 88%
   position: relative
+
   &::after
     z-index: 2
     position: absolute
@@ -335,26 +363,31 @@
     color: inherit
     display: inline-block
     text-decoration: underline
+
     &.withBlueBox span, p
       text-decoration: underline
       color: $white
       background-color: $darkBlue
       padding: 1px 7px
       display: block
+
     &.bigBlueBox
       display: block
       margin: 20px 0 10px
+
       span, p
         text-decoration: underline
         color: $white
         background-color: $darkBlue
         padding: 8px 14px
+
   img
     max-width: 100%
     max-height: 400px
     margin-top: 5px
     margin-bottom: 5px
     display: block
+
   p:after
     content: ''
     display: inline-block
@@ -377,12 +410,15 @@
   float: left
   margin-bottom: 10px
   margin-left: 10px
+
   &:nth-child(2n + 1)
     margin-left: 0
+
   &:after
     content: ""
     display: block
     padding-bottom: 100%
+
   @include media(">=iphone6Plus")
     width: calc(33% - 7px)
     &:nth-child(2n + 1)
@@ -413,6 +449,7 @@
   display: block
   @include media(">bigPhone")
     line-height: 40px
+
   &::after
     content: ''
     position: absolute

@@ -12,7 +12,7 @@ import Layout from '../components/Layout';
 
 import styles from './index.module.sass';
 
-const Team = ({ team, footer, seo }) => {
+const Team = ({ team, seo }) => {
   const {
     i18n: { language },
   } = useTranslation();
@@ -20,7 +20,7 @@ const Team = ({ team, footer, seo }) => {
   return (
     <>
       <Meta seo={seo.seoTeam} />
-      <Layout footer={footer}>
+      <Layout>
         <h1>
           <span className={styles.pageHeading}>Team</span>
         </h1>
@@ -61,11 +61,10 @@ Team.defaultProps = {
 };
 
 export async function getServerSideProps() {
-  const { footer, seo, team } = await fetchTeam();
+  const { seo, team } = await fetchTeam();
 
   return {
     props: {
-      footer,
       team,
       seo,
     },

@@ -9,7 +9,6 @@ import simpleEditor from './simpleEditor';
 import richEditor from './richEditor';
 import gallery from './gallery';
 import home from './home';
-import footer from './footer';
 import seo from './seo';
 import downloadButton from './downloadButton';
 import linkButton from './linkButton';
@@ -26,7 +25,6 @@ export default createSchema({
     richEditor,
     gallery,
     home,
-    footer,
     seo,
     downloadButton,
     linkButton,

@@ -5,7 +5,7 @@ import { useTranslation } from '../../i18n';
 import styles from './FooterImprint.module.sass';
 import Link from '../Link';
 
-const FooterImprint = ({ imprintDe, imprintEn }) => {
+const FooterImprint = () => {
   const {
     i18n: { language },
     t,

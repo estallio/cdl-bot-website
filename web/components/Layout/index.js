@@ -7,7 +7,7 @@ import Footer from '../Footer';
 
 import styles from './Layout.module.sass';
 
-const Layout = ({ children, footer }) => {
+const Layout = ({ children }) => {
   return (
     <>
       <HeadDependencies />
@@ -16,11 +16,7 @@ const Layout = ({ children, footer }) => {
         <div id="main" className={styles.main}>
           <div className={styles.center}>{children}</div>
         </div>
-        <Footer
-          contact={footer.contact}
-          imprintDe={footer.imprintDe}
-          imprintEn={footer.imprintEn}
-        />
+        <Footer />
       </div>
     </>
   );

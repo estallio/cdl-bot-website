@@ -1,7 +1,7 @@
 import S from '@sanity/desk-tool/structure-builder';
 import { BsNewspaper, BsSearch } from 'react-icons/bs';
 import { AiOutlineTeam, AiOutlineHome } from 'react-icons/ai';
-import { RiFilePaper2Line, RiLayoutBottom2Line } from 'react-icons/ri';
+import { RiFilePaper2Line } from 'react-icons/ri';
 
 const newsListItem = S.listItem()
 .title('News')
@@ -59,17 +59,6 @@ const homeListItem = S.listItem()
   .documentId('home')
 );
 
-const footerListItem = S.listItem()
-.title('Footer')
-.icon(RiLayoutBottom2Line)
-.child(
-  S.editor()
-  .title('Footer')
-  .id('footer')
-  .schemaType('footer')
-  .documentId('footer')
-);
-
 const seoListItem = S.listItem()
 .title('SEO')
 .icon(BsSearch)
@@ -89,7 +78,6 @@ export default () =>
     newsListItem,
     teamListItem,
     publicationsListItem,
-    footerListItem,
     seoListItem,
     imprintListItem
   ]);

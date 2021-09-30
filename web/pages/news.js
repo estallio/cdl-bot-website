@@ -14,7 +14,7 @@ import Layout from '../components/Layout';
 
 import styles from './index.module.sass';
 
-const News = ({ news, seo, footer }) => {
+const News = ({ news, seo }) => {
   const {
     i18n: { language },
   } = useTranslation('miscellaneous');
@@ -22,7 +22,7 @@ const News = ({ news, seo, footer }) => {
   return (
     <>
       <Meta seo={seo.seoNews} />
-      <Layout footer={footer}>
+      <Layout>
         <h1>
           <span className={styles.pageHeading}>News</span>
         </h1>
@@ -54,13 +54,12 @@ News.defaultProps = {
 };
 
 export async function getServerSideProps() {
-  const { news, seo, footer } = await fetchNews();
+  const { news, seo } = await fetchNews();
 
   return {
     props: {
       news,
       seo,
-      footer,
     },
   };
 }
