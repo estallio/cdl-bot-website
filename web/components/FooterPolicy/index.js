@@ -1,26 +1,28 @@
 import React from 'react';
 
-import styles from './FooterPolicy.module.sass';
 import { useTranslation } from '../../i18n';
+
+import styles from './FooterPolicy.module.sass';
+import Link from '../Link';
 
 const FooterPolicy = () => {
   const {
     i18n: { language },
     t,
   } = useTranslation('miscellaneous');
+
   return (
-    <a
-      href={
-        language === 'de'
-          ? 'https://www.tuhh.de/tuhh/ueber-uns/datenschutz.html'
-          : 'https://www.tuhh.de/alt/tuhh/about-us/data-privacy.html'
-      }
-      className={styles.footerPolicy}
-    >
-      <a>
-        <span>{t('privacy-policy')}</span>
-      </a>
-    </a>
+    <div className={styles.footerPolicy}>
+      <Link
+        href="/policy"
+        defaultClass={styles.navItem}
+        activeClass={styles.active}
+      >
+        <a>
+          <span>{t('privacy-policy')}</span>
+        </a>
+      </Link>
+    </div>
   );
 };
 

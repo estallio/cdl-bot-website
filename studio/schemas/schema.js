@@ -12,7 +12,8 @@ import home from './home';
 import seo from './seo';
 import downloadButton from './downloadButton';
 import linkButton from './linkButton';
-import imprint from './imprint'
+import imprint from './imprint';
+import policy from './policy'
 
 export default createSchema({
   name: 'default',
@@ -28,6 +29,7 @@ export default createSchema({
     seo,
     downloadButton,
     linkButton,
-    imprint
+    imprint,
+    policy
   ])
 });

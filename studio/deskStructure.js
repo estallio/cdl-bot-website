@@ -36,6 +36,17 @@ const imprintListItem = S.listItem()
       .schemaType('imprint')
       .documentId('imprint')
   );
+  
+const privacyPolicyListItem = S.listItem()
+  .title('Privacy Policy')
+  .icon(RiFilePaper2Line)
+  .child(
+    S.editor()
+      .title('Privacy Policy')
+      .id('policy')
+      .schemaType('policy')
+      .documentId('policy')
+  );
 
 const publicationsListItem = S.listItem()
 .title('Publications')
@@ -79,5 +90,6 @@ export default () =>
     teamListItem,
     publicationsListItem,
     seoListItem,
-    imprintListItem
+    imprintListItem,
+    privacyPolicyListItem
   ]);

@@ -612,4 +612,95 @@ const fetchImprint = async () => {
   );
 };
 
-export { fetchTeam, fetchNews, fetchPublications, fetchHome, fetchImprint };
+const fetchPolicy = async () => {
+  return await client.fetch(
+    `{
+      'policy': *[!(_id in path("drafts.**")) && _type == 'policy'][0]{
+        privacyPolicyContentEn[]{
+          ...,
+          _type == 'downloadButton' => {
+            'fileUrl': file.asset->url
+          },
+          _type == 'linkButton' => {
+            'linkUrl': href
+          },
+          _type == 'gallery' => {
+            images[]{
+              'imageUrl': asset->url,
+              'width': asset->metadata.dimensions.width,
+              'height': asset->metadata.dimensions.height,
+              'altText': asset->altText
+            }
+          },
+          _type == 'image' => {
+            'imageUrl': asset->url,
+            'width': asset->metadata.dimensions.width,
+            'height': asset->metadata.dimensions.height,
+            'altText': asset->altText
+          },
+          _type == 'block' => {
+            ...,
+            markDefs[] {
+              ...,
+              _type == 'link' => {
+                'linkUrl': href
+              },
+              _type == 'file' => {
+                'fileUrl': asset->url
+              },
+              _type == 'blueBoxLink' => {
+                'linkUrl': href
+              },
+              _type == 'blueBoxFile' => {
+                'fileUrl': asset->url
+              }
+            }
+          }
+        },
+        privacyPolicyContentGe[]{
+          ...,
+          _type == 'downloadButton' => {
+            'fileUrl': file.asset->url
+          },
+          _type == 'linkButton' => {
+            'linkUrl': href
+          },
+          _type == 'gallery' => {
+            images[]{
+              'imageUrl': asset->url,
+              'width': asset->metadata.dimensions.width,
+              'height': asset->metadata.dimensions.height,
+              'altText': asset->altText
+            }
+          },
+          _type == 'image' => {
+            'imageUrl': asset->url,
+            'width': asset->metadata.dimensions.width,
+            'height': asset->metadata.dimensions.height,
+            'altText': asset->altText
+          },
+          _type == 'block' => {
+            ...,
+            markDefs[] {
+              ...,
+              _type == 'link' => {
+                'linkUrl': href
+              },
+              _type == 'file' => {
+                'fileUrl': asset->url
+              },
+              _type == 'blueBoxLink' => {
+                'linkUrl': href
+              },
+              _type == 'blueBoxFile' => {
+                'fileUrl': asset->url
+              }
+            }
+          }
+        }
+      }
+    }`
+  );
+};
+
+export { fetchTeam, fetchNews, fetchPublications, fetchHome, fetchImprint, fetchPolicy };
