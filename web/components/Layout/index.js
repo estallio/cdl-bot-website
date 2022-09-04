@@ -28,16 +28,6 @@ const HeadDependencies = () => (
   <Head>
     {/* For responsiveness */}
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    {/* For google fonts */}
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Open+Sans:wght@600&display=swap"
-      rel="stylesheet"
-      /*
-        font-family: 'Kanit', sans-serif;
-        font-family: 'Open Sans', sans-serif;
-      */
-    />
     {/* Favicon for old IEs */}
     <link rel="shortcut icon" href="/theme/favicons/favicon.ico" />
     {/* Favicon for new browsers - multisize ico */}
