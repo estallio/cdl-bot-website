@@ -4,7 +4,7 @@
   "private": true,
   "author": "Leonhard Esterbauer <leonhard.esterbauer@gmail.com>",
   "engines": {
-    "node": "10.x"
+    "node": ">=20"
   },
   "scripts": {
     "dev": "lerna run dev --parallel",
@@ -14,7 +14,7 @@
     "empty-cache": "lerna run empty-cache"
   },
   "devDependencies": {
-    "lerna": "^3.14.1",
-    "rimraf": "^2.6.3"
+    "lerna": "^8.1.9",
+    "rimraf": "^6.0.1"
   }
 }
