@@ -282,21 +282,18 @@ const fetchHome = async () => {
 };
 
 const fetchTeam = async () => {
-  return await client.fetch(
+  const data = await client.fetch(
     `{
       'seo': *[!(_id in path("drafts.**")) && _type == 'seo'][0]{ seoTeam },
       'team': *[!(_id in path("drafts.**")) && _type == 'team'][0]{
         persons[]{
-          ...,
+          name,
           'pictureUrl': picture.asset->url,
+          email,
           infoDe[]{
             ...,
-            _type == 'downloadButton' => {
-              'fileUrl': file.asset->url
-            },
-            _type == 'linkButton' => {
-              'linkUrl': href
-            },
+            _type == 'downloadButton' => { 'fileUrl': file.asset->url },
+            _type == 'linkButton' => { 'linkUrl': href },
             _type == 'gallery' => {
               images[]{
                 'imageUrl': asset->url,
@@ -313,31 +310,19 @@ const fetchTeam = async () => {
             },
             _type == 'block' => {
               ...,
-              markDefs[] {
+              markDefs[]{
                 ...,
-                _type == 'link' => {
-                  'linkUrl': href
-                },
-                _type == 'file' => {
-                  'fileUrl': asset->url
-                },
-                _type == 'blueBoxLink' => {
-                  'linkUrl': href
-                },
-                _type == 'blueBoxFile' => {
-                  'fileUrl': asset->url
-                }
+                _type == 'link' => { 'linkUrl': href },
+                _type == 'file' => { 'fileUrl': asset->url },
+                _type == 'blueBoxLink' => { 'linkUrl': href },
+                _type == 'blueBoxFile' => { 'fileUrl': asset->url }
               }
             }
           },
           infoEn[]{
             ...,
-            _type == 'downloadButton' => {
-              'fileUrl': file.asset->url
-            },
-            _type == 'linkButton' => {
-              'linkUrl': href
-            },
+            _type == 'downloadButton' => { 'fileUrl': file.asset->url },
+            _type == 'linkButton' => { 'linkUrl': href },
             _type == 'gallery' => {
               images[]{
                 'imageUrl': asset->url,
@@ -354,20 +339,75 @@ const fetchTeam = async () => {
             },
             _type == 'block' => {
               ...,
-              markDefs[] {
+              markDefs[]{
                 ...,
-                _type == 'link' => {
-                  'linkUrl': href
-                },
-                _type == 'file' => {
-                  'fileUrl': asset->url
-                },
-                _type == 'blueBoxLink' => {
-                  'linkUrl': href
-                },
-                _type == 'blueBoxFile' => {
-                  'fileUrl': asset->url
-                }
+                _type == 'link' => { 'linkUrl': href },
+                _type == 'file' => { 'fileUrl': asset->url },
+                _type == 'blueBoxLink' => { 'linkUrl': href },
+                _type == 'blueBoxFile' => { 'fileUrl': asset->url }
+              }
+            }
+          }
+        },
+        alumni[]{
+          name,
+          'pictureUrl': picture.asset->url,
+          email,
+          infoDe[]{
+            ...,
+            _type == 'downloadButton' => { 'fileUrl': file.asset->url },
+            _type == 'linkButton' => { 'linkUrl': href },
+            _type == 'gallery' => {
+              images[]{
+                'imageUrl': asset->url,
+                'width': asset->metadata.dimensions.width,
+                'height': asset->metadata.dimensions.height,
+                'altText': asset->altText
+              }
+            },
+            _type == 'image' => {
+              'imageUrl': asset->url,
+              'width': asset->metadata.dimensions.width,
+              'height': asset->metadata.dimensions.height,
+              'altText': asset->altText
+            },
+            _type == 'block' => {
+              ...,
+              markDefs[]{
+                ...,
+                _type == 'link' => { 'linkUrl': href },
+                _type == 'file' => { 'fileUrl': asset->url },
+                _type == 'blueBoxLink' => { 'linkUrl': href },
+                _type == 'blueBoxFile' => { 'fileUrl': asset->url }
+              }
+            }
+          },
+          infoEn[]{
+            ...,
+            _type == 'downloadButton' => { 'fileUrl': file.asset->url },
+            _type == 'linkButton' => { 'linkUrl': href },
+            _type == 'gallery' => {
+              images[]{
+                'imageUrl': asset->url,
+                'width': asset->metadata.dimensions.width,
+                'height': asset->metadata.dimensions.height,
+                'altText': asset->altText
+              }
+            },
+            _type == 'image' => {
+              'imageUrl': asset->url,
+              'width': asset->metadata.dimensions.width,
+              'height': asset->metadata.dimensions.height,
+              'altText': asset->altText
+            },
+            _type == 'block' => {
+              ...,
+              markDefs[]{
+                ...,
+                _type == 'link' => { 'linkUrl': href },
+                _type == 'file' => { 'fileUrl': asset->url },
+                _type == 'blueBoxLink' => { 'linkUrl': href },
+                _type == 'blueBoxFile' => { 'fileUrl': asset->url }
               }
             }
           }
@@ -375,6 +415,11 @@ const fetchTeam = async () => {
       }
     }`
   );
+
+  console.log('Fetched Team Data:', JSON.stringify(data.team.persons, null, 2));
+  console.log('Fetched Alumni Data:', JSON.stringify(data.team.alumni, null, 2));
+
+  return data;
 };
 
 const fetchNews = async () => {
