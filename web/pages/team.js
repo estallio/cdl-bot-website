@@ -21,7 +21,8 @@ const Team = ({ team, seo }) => {
           <span className={styles.pageHeading}>Team</span>
         </h1>
         <div className={styles.teamSection}>
-  <h2 className={styles.sectionTitle}>Current Team Members</h2>
+  <h2 className={styles.sectionTitle}>
+  {language === 'de' ? 'Aktuelle Teammitglieder' : 'Current Team Members'}</h2>
   <div className={styles.people}>
     {team.persons && team.persons.length > 0 ? (
       team.persons.map((person, i) => {
@@ -56,7 +57,8 @@ const Team = ({ team, seo }) => {
   </div>
 </div>
 <div className={styles.alumniSection}>
-  <h2 className={styles.sectionTitle}>Former Team Members</h2>
+  <h2 className={styles.sectionTitle}>
+  {language === 'de' ? 'Ehemalige Teammitglieder' : 'Former Team Members'}</h2>
   <div className={styles.people}>
     {team.alumni && team.alumni.length > 0 ? (
       team.alumni.map((person, i) => {
