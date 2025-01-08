@@ -9,6 +9,12 @@ export default {
       name: 'persons',
       type: 'array',
       of: [ { type: 'person' } ],
-    }
-  ]
-}
+    },
+    {
+      title: 'Alumni Members',
+      name: 'alumni',
+      type: 'array',
+      of: [{ type: 'person' }],
+    },
+  ],
+};
