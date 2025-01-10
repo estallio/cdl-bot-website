@@ -411,6 +411,10 @@ const fetchTeam = async () => {
               }
             }
           }
+        },
+        supportTeam[]{
+          name,
+          university
         }
       }
     }`
@@ -418,6 +422,7 @@ const fetchTeam = async () => {
 
   console.log('Fetched Team Data:', JSON.stringify(data.team.persons, null, 2));
   console.log('Fetched Alumni Data:', JSON.stringify(data.team.alumni, null, 2));
+  console.log('Fetched Support Team Data:', JSON.stringify(data.team.supportTeam, null, 2));
 
   return data;
 };

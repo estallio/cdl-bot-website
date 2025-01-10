@@ -3,6 +3,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 import team from './team';
 import person from './person';
+import supportTeamMember from './supportTeamMember';
 import news from './news';
 import publications from './publications';
 import simpleEditor from './simpleEditor';
@@ -20,6 +21,7 @@ export default createSchema({
   types: schemaTypes.concat([
     team,
     person,
+    supportTeamMember,
     news,
     publications,
     simpleEditor,

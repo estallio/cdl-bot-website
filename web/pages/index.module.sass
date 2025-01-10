@@ -482,3 +482,24 @@
   padding-bottom: 0.5rem // Adds spacing below the title
   margin-bottom: 1.5rem // Adds spacing between the title and content
 
+.supportTeamSection
+  margin-top: 2rem
+
+.supportTeamList
+  list-style-type: none
+  padding-left: 0
+
+.supportTeamList li
+  position: relative
+  padding-left: 1.5rem
+  margin-bottom: 0.5rem
+
+.supportTeamList li::before
+  content: ''
+  position: absolute
+  left: 0
+  top: 0.5rem
+  width: 0.5rem
+  height: 0.5rem
+  background-color: $blue // Uses the website's defined blue color for the bullet point
+  border-radius: 50%

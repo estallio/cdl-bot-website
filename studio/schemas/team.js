@@ -16,5 +16,11 @@ export default {
       type: 'array',
       of: [{ type: 'person' }],
     },
+    {
+      title: 'Administrative and Project Support Team Members',
+      name: 'supportTeam',
+      type: 'array',
+      of: [{ type: 'supportTeamMember' }],
+    },
   ],
 };
