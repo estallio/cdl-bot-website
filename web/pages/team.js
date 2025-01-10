@@ -96,7 +96,7 @@ const Team = ({ team, seo }) => {
         <div className={styles.supportTeamSection}>
   <h2 className={styles.sectionTitle}>
     {language === 'de'
-      ? 'Ehemalige Verwaltungs- und Studierendenteammitglieder'
+      ? 'Ehemalige Administrative und Studentische Teammitglieder'
       : 'Former Administrative and Student Team Members'}
   </h2>
   <ul className={styles.supportTeamList}>
