@@ -17,43 +17,6 @@ const Publications = ({ publications, seo }) => {
     i18n: { language },
     t,
   } = useTranslation('publications');
-  
-  const getSortedPublications = (content = []) => {
-    const sorted = [];
-    let currentYearBlock = null;
-    let currentEntries = [];
-
-    const pushYearGroup = () => {
-      if (currentYearBlock) {
-        // Sort entries alphabetically based on their first author text
-        currentEntries.sort((a, b) => {
-          const aText = a.children?.map(c => c.text).join('') || '';
-          const bText = b.children?.map(c => c.text).join('') || '';
-          return aText.localeCompare(bText);
-        });
-        sorted.push(currentYearBlock, ...currentEntries);
-      }
-    };
-
-    for (const block of content) {
-      if (block._type === 'block' && block.style === 'h3') {
-        // This is a year heading like "2025"
-        pushYearGroup();
-        currentYearBlock = block;
-        currentEntries = [];
-      } else if (block._type === 'block' && block.style === 'normal') {
-        // This is a publication entry
-        currentEntries.push(block);
-      } else {
-        // Other block types just go into the sorted array as-is
-        sorted.push(block);
-      }
-    }
-
-    pushYearGroup(); // push the final group
-    return sorted;
-  };
-
 
   return (
     <>
@@ -64,8 +27,7 @@ const Publications = ({ publications, seo }) => {
             {language === 'de' ? 'Publikationen' : 'Publications'}
           </span>
         </h1>
-        <ExtendedBlockContent blocks={getSortedPublications(publications.content)} />
-
+        <ExtendedBlockContent blocks={publications.content || []} />
       </Layout>
     </>
   );
